@@ -1,7 +1,6 @@
 import { Lexend_Deca } from 'next/font/google'
 import './globals.css'
 import Navbar from './component/navbar/Navbar'
-import Container from './component/Container'
 import Footer from './component/footer/Footer'
 
 const lexend_deca = Lexend_Deca({ subsets: ['latin'] })
