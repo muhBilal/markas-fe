@@ -1,4 +1,5 @@
 import { Lexend_Peta } from "next/font/google";
+import Link from "next/link";
 import Container from "../Container";
 import Image from "next/image";
 const lexend_peta = Lexend_Peta({ subsets: ['latin'], weight: ['400', '700'] })
@@ -32,6 +33,16 @@ const Filosofi = () => {
                         <span className={`font-light text-md `}>Area kerja bersama yang dapat diakses para startup founder dan stakeholder startup.</span>
                     </div>
 
+                </div>
+                <div className="flex justify-center">
+
+                    <Link
+                        href={"https://www.instagram.com/markas.indonesia/"}
+                        target="_blank"
+                        className="">
+
+                        <span className="text-white rounded-full bg-[#D90027] p-4 px-8">Cari Tahu Lebih</span>
+                    </Link>
                 </div>
             </div>
         </Container>

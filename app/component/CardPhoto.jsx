@@ -45,7 +45,7 @@ const CardPhoto = () => {
                     </div>
 
                 </Marquee >
-                <Marquee speed={20} pauseOnHover>
+                <Marquee speed={30} pauseOnHover>
                     <div className={`mx-3 whitespace-nowrap grid grid-cols-6 gap-x-6  `}>
                         <Image
                             src={'/static/img/kolaborasi.png'}
@@ -91,7 +91,7 @@ const CardPhoto = () => {
             <Link
                 href={"https://www.instagram.com/markas.indonesia/"}
                 target="_blank">
-                <span className="text-white rounded-full bg-[#D90027] p-4">Kunjungi Instagram Kami</span>
+                <span className="text-white rounded-full bg-[#D90027] p-4 font-semibold">Kunjungi Instagram Kami</span>
             </Link>
         </div >
     );

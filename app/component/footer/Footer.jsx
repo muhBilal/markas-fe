@@ -22,24 +22,29 @@ const Footer = () => {
                         </div>
                         <div className="col-span-2 mt-8 md:mt-3 flex md:flex-row flex-col justify-around gap-y-8 md:gap-y-0">
                             <div className="flex flex-col sm:gap-y-3 md:gap-y-8">
-                                <h3 className="font-light text-[#D90027] text-xl">Lokasi</h3>
-                                <p className="font-semibold text-2xl">SURABAYA</p>
-                                <p className="font-semibold text-2xl">SURABAYA</p>
-                                <p className="font-semibold text-2xl">SURABAYA</p>
-                                <p className="font-semibold text-2xl">SURABAYA</p>
+                                <h3 className="font-light text-[#D90027] text-xl">LOKASI</h3>
+                                <a href="#" className="font-semibold text-2xl">SURABAYA</a>
+                                <a href="#" className="font-semibold text-2xl">JAKARTA</a>
+                                <a href="#" className="font-semibold text-2xl">BANDUNG</a>
+                                <a href="#" className="font-semibold text-2xl">YOGYAKARTA</a>
+                                <a href="#" className="font-semibold text-2xl">MALANG</a>
                             </div>
                             <div className="flex flex-col sm:gap-y-3 md:gap-y-8">
-                                <h3 className="font-light text-[#D90027] text-xl">Lokasi</h3>
-                                <p className="font-semibold text-2xl">SURABAYA</p>
-                                <p className="font-semibold text-2xl">SURABAYA</p>
-                                <p className="font-semibold text-2xl">SURABAYA</p>
+                                <h3 className="font-light text-[#D90027] text-xl">BANTUAN</h3>
+                                <a href="#" className="font-semibold text-2xl">KERJASAMA</a >
+                                <a href="#" className="font-semibold text-2xl">AFILIASI</a >
+                                <a href="#" className="font-semibold text-2xl">FAQ</a >
                             </div>
                             <div className="flex flex-col sm:gap-y-3 md:gap-y-8">
-                                <h3 className="font-light text-[#D90027] text-xl">Lokasi</h3>
-                                <p className="font-semibold text-2xl">SURABAYA</p>
-                                <p className="font-semibold text-2xl">SURABAYA</p>
-                                <p className="font-semibold text-2xl">SURABAYA</p>
-                                <p className="font-semibold text-2xl">SURABAYA</p>
+                                <h3 className="font-light text-[#D90027] text-xl">TENTANG</h3>
+                                <a href="#" className="font-semibold text-2xl">FILOSOFI</a>
+                                <a href="#" className="font-semibold text-2xl">RUANGAN</a>
+                                <a href="#" className="font-semibold text-2xl">ACARA</a>
+                                <div className="flex flex-col mt-3 sm:mt-0 sm:gap-y-3 md:gap-y-4 ">
+                                    <a href="#" className="font-semibold text-2xl">FACEBOOK</a>
+                                    <a href="#" className="font-semibold text-2xl">INSTAGRAM</a>
+                                    <a href="#" className="font-semibold text-2xl">TWITTER</a>
+                                </div>
                             </div>
                         </div>
 
