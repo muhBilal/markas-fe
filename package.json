@@ -9,14 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@ericz1803/react-google-calendar": "^4.3.1",
     "aos": "^2.3.4",
     "flowbite": "^2.1.1",
     "flowbite-react": "^0.6.4",
     "next": "14.0.3",
     "next-auth": "^4.24.5",
     "next-nprogress-bar": "^2.1.2",
-    "react": "^18",
-    "react-dom": "^18",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-fast-marquee": "^1.6.2",
     "react-hook-form": "^7.48.2",
     "react-hot-toast": "^2.4.1",
