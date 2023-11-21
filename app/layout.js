@@ -7,11 +7,6 @@ import { AppProgressBar as ProgressBar } from "next-nprogress-bar";
 
 const lexend_deca = Lexend_Deca({ subsets: ["latin"] });
 
-export const metadata = {
-  title: "Markas",
-  description: "A hub for startup founders to grow with the ecosystem.",
-};
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
