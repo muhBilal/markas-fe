@@ -3,7 +3,7 @@ const OrderStep = () => {
         <div className="bg-[#D90027] text-center p-16">
             <div className="flex flex-col gap-y-8">
                 <h2 className="text-4xl font-bold text-white">4 LANGKAH PESAN RUANG DI MARKAS</h2>
-                <div className="grid grid-cols-4 gap-x-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-8">
                     <div className=" rounded-lg bg-white flex flex-col gap-y-4 items-center py-8 px-6">
                         <div className="rounded-full bg-[#D90027] py-4 px-7 ">
                             <span className=" text-white text-2xl font-semibold ">1</span>
