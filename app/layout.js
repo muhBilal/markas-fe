@@ -13,6 +13,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${lexend_deca.className} max-w-[1920px] mx-auto `}>
         <div className="flex flex-col min-h-screen">
+
           <Navbar />
           <main className="flex-grow">{children}</main>
           <Footer />
