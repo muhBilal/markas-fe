@@ -29,7 +29,7 @@ const Hero = () => {
                         springConfig={presets.stiff}
                         direction="up"
                         inline
-                        className="ml-2 text-[#D90027]">
+                        className="ml-2 text-[#D90027] font-bold">
                         {texts[textTranstion]}
                     </ReactTextTransition> with the ecosystem.
                 </span>

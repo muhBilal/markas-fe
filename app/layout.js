@@ -12,11 +12,14 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${lexend_deca.className} max-w-[1920px] mx-auto `}>
-        <div className="flex flex-col min-h-screen">
-          <Navbar />
-          <main className="flex-grow">{children}</main>
-          <Footer />
-        </div>
+        <NextAuthProviders>
+          <div className="flex flex-col min-h-screen">
+            <Navbar />
+            <main className="flex-grow">{children}</main>
+            <Footer />
+          </div>
+        </NextAuthProviders>
+
         <ProgressBar
           height="4px"
           color="#D90027"

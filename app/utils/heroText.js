@@ -1,5 +1,1 @@
-export const texts = [
-  "Grow",
-  "Connect",
-  "Collaborate",
-];
+export const texts = ["Grow", "Connect", "Collaborate", "Code"];
