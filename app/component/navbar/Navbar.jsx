@@ -1,10 +1,14 @@
+"use client"
 import Link from "next/link";
 import { Lexend_Peta } from "next/font/google";
 import Container from "../Container";
+import { useSession, signOut } from "next-auth/react";
+import GoogleSignInBtn from "@/components/GoogleSignInBtn";
 
 const lexend_peta = Lexend_Peta({ subsets: ['latin'], weight: ['400', '700'] })
 
 const Navbar = () => {
+    const { data, status } = useSession();
     return (
         <div className="w-full bg-white">
             <div className="py-4 boder[0.5px]">
@@ -27,7 +31,20 @@ const Navbar = () => {
                                 Ruangan
                             </Link>
                         </div>
-                        <div className=""></div>
+                        {
+                            status !== "authenticated" ? (
+                                <GoogleSignInBtn />
+                            ) : (
+                                <>
+                                    <div className="text-black">
+                                        {
+                                            data?.user?.name
+                                        }
+                                    </div>
+                                    <button className='rounded bg-red-500 text-white py-2 px-3' onClick={() => signOut()}>Keluar</button>
+                                </>
+                            )
+                        }
                     </div>
                 </Container>
             </div>
