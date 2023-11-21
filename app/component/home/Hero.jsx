@@ -26,7 +26,10 @@ const Hero = () => {
                 <span className="font-light text-xl md:text-2xl xl:text-4xl text-center">
                     A hub for startup founders to
                     <ReactTextTransition
-                        inline className="ml-2">
+                        springConfig={presets.stiff}
+                        direction="up"
+                        inline
+                        className="ml-2 text-[#D90027]">
                         {texts[textTranstion]}
                     </ReactTextTransition> with the ecosystem.
                 </span>
