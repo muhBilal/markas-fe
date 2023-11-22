@@ -30,7 +30,7 @@ const Filosofi = () => {
                         <Image src="/static/img/kolaborasi.png" width={300} height={300} className="rounded-xl" />
                         <h2 className={`text-[#D90027] font-light text-lg `}>Expand Network</h2>
                         <h2 className={`font-semibold text-2xl `}>Wadah Berkolaborasi</h2>
-                        <span className={`font-light text-md `}>Area kerja bersama yang dapat diakses para startup founder dan stakeholder startup.</span>
+                        <span className={`font-light text-lg `}>Area kerja bersama yang dapat diakses para startup founder dan stakeholder startup.</span>
                     </div>
 
                 </div>
