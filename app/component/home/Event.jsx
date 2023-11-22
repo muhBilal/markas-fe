@@ -1,15 +1,31 @@
+"use client";
 import Container from "../Container";
-// Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-// Import Swiper styles
 import 'swiper/css';
 import Image from "next/image";
 import Link from "next/link";
 import { CardEvent } from "../card/CardEvent";
-import { Navigation } from 'swiper/modules';
 import { RxCaretLeft, RxCaretRight } from "react-icons/rx";
+import { useRef } from "react";
+import SwiperCore, { Navigation } from 'swiper';
+
+SwiperCore.use([Navigation]);
+
 const Event = () => {
+    const swiperRef = useRef(null);
+
+    const goToNextSlide = () => {
+        if (swiperRef.current && swiperRef.current.swiper) {
+            swiperRef.current.swiper.slideNext();
+        }
+    };
+
+    const goToPrevSlide = () => {
+        if (swiperRef.current && swiperRef.current.swiper) {
+            swiperRef.current.swiper.slidePrev();
+        }
+    };
+
     return (
         <Container>
             <div className="py-32">
@@ -20,26 +36,27 @@ const Event = () => {
                             <h2 className=" font-light text-lg">Jangan lewatkan event-event seru di MARKAS</h2>
                         </div>
                         <div className="flex gap-x-4 justify-end">
-                            <button className="border-black border-[2px] rounded-full  px-2 py-2">
+                            <button onClick={goToPrevSlide} className="border-black border-[2px] rounded-full px-2 py-2 swiper-button-prev">
                                 <RxCaretLeft className="text-4xl font-extrabold" />
                             </button>
-                            <button className="border-black border-[2px] rounded-full  px-2 py-2">
+                            <button onClick={goToNextSlide} className="border-black border-[2px] rounded-full px-2 py-2 swiper-button-next">
                                 <RxCaretRight className="text-4xl font-extrabold" />
                             </button>
                         </div>
                     </div>
-
-
-
                 </div>
 
 
                 <Swiper
+                    ref={swiperRef}
                     spaceBetween={50}
                     slidesPerView={1}
                     onSlideChange={() => console.log('slide change')}
                     onSwiper={(swiper) => console.log(swiper)}
-                    className=""
+                    navigation={{
+                        prevEl: '.swiper-button-prev',
+                        nextEl: '.swiper-button-next',
+                    }}
                 >
                     <SwiperSlide>
                         <CardEvent />
