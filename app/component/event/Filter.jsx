@@ -23,16 +23,16 @@ const Filter = () => {
 
           <form className="w-full mt-5">
             <label
-              for="default-search"
-              class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
+              htmlFor="default-search"
+              className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
             >
               Search
             </label>
-            <div class="relative bg-white w-full rounded-[2.5rem]">
+            <div className="relative bg-white w-full rounded-[2.5rem]">
               <input
                 type="search"
                 id="default-search"
-                class="block w-full p-7 text-sm text-gray-900 border-none pr-20 placeholder:text-gray-400 font-light placeholder:text-2xl rounded-full bg-white shadow-lg focus:ring-red-500 focus:border-red-500"
+                className="block w-full p-7 text-sm text-gray-900 border-none pr-20 placeholder:text-gray-400 font-light placeholder:text-2xl rounded-full bg-white shadow-lg focus:ring-red-500 focus:border-red-500"
                 placeholder="Cari event yang ada di MARKAS Surabaya"
                 required
               />
@@ -40,7 +40,7 @@ const Filter = () => {
                 <button
                   onClick={() => setisShow(true)}
                   type="button"
-                  class="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                  className="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                 >
                   bukak
                 </button>
@@ -48,7 +48,7 @@ const Filter = () => {
                 <button
                   onClick={() => setisShow(false)}
                   type="button"
-                  class="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                  className="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                 >
                   tutup
                 </button>

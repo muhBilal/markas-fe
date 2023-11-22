@@ -48,7 +48,7 @@ const Navbar = () => {
                                                 data?.user?.name
                                             }
                                         </div>
-                                        <button className='rounded bg-red-500 text-white py-2 px-3' onClick={() => signOut()}>Keluar</button>
+                                        <button className='rounded bg-primary text-white py-2 px-3' onClick={() => signOut()}>Keluar</button>
                                     </>
                                 )
                             }

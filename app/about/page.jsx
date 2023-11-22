@@ -4,7 +4,7 @@ import { Lexend_Peta } from "next/font/google";
 import Hero from '../component/about/Hero'
 import Filosofi from '../component/about/Filosofi';
 import Karakteristik from '../component/Karakteristik';
-import CardKerjaSama from '../component/CardKerjasama';
+// import CardKerjaSama from '../component/CardKerjasama';
 import Kolaborasi from '../component/about/Kolaborasi';
 const lexend_peta = Lexend_Peta({ subsets: ['latin'], weight: ['400', '700'] })
 
