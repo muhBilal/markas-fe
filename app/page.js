@@ -18,6 +18,7 @@ import Event from './component/home/Event';
 import { Button } from 'flowbite-react';
 import Link from 'next/link';
 import Karakteristik from './component/Karakteristik';
+import Faq from './component/home/Faq';
 
 export default function Home() {
   useEffect(() => {
@@ -54,6 +55,7 @@ export default function Home() {
           </div>
         </div>
         <Karakteristik />
+        <Faq />
         <CardPhoto />
         <CardKerjaSama />
         <Join />

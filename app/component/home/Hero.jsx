@@ -2,18 +2,18 @@ import { Lexend_Peta } from "next/font/google";
 import { useEffect, useState } from "react";
 import ReactTextTransition, { presets } from "react-text-transition";
 import { texts } from "../../utils/heroText"
-import getRandomInt from "@/app/utils/getRandomNumber";
 const lexend_peta = Lexend_Peta({ subsets: ['latin'], weight: ['400', '700'] })
+const TEXTS = ["Grow", "Connect", "Collaborate", "Code"];
+
 const Hero = () => {
-    const [textTranstion, setTextTransition] = useState(0)
+    const [index, setIndex] = useState(0);
 
     useEffect(() => {
-        let interval = setInterval(() => {
-            setTextTransition(getRandomInt(0, texts.length))
-        }, 2000);
+        const intervalId = setInterval(() =>
+            setIndex((index) => index + 1), 2000);
 
         return () => {
-            clearInterval(interval);
+            clearTimeout(intervalId);
         }
     }, []);
     return (
@@ -29,8 +29,8 @@ const Hero = () => {
                         springConfig={presets.stiff}
                         direction="up"
                         inline
-                        className="ml-2 text-[#D90027] font-bold">
-                        {texts[textTranstion]}
+                        className="ml-2 text-primary font-bold">
+                        {TEXTS[index % TEXTS.length]}
                     </ReactTextTransition> with the ecosystem.
                 </span>
             </div>

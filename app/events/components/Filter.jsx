@@ -1,6 +1,6 @@
 import { Lexend_Peta } from "next/font/google";
 import Link from "next/link";
-import Container from "../Container";
+import Container from "../../component/Container";
 import Image from "next/image";
 import { useState } from "react";
 const lexend_peta = Lexend_Peta({ subsets: ["latin"], weight: ["400", "700"] });
@@ -28,7 +28,7 @@ const Filter = () => {
             >
               Search
             </label>
-            <div className="relative bg-white w-full rounded-[2.5rem]">
+            <div class="relative bg-gray-100 shadow-md w-full rounded-[2.5rem]">
               <input
                 type="search"
                 id="default-search"
@@ -37,21 +37,27 @@ const Filter = () => {
                 required
               />
               {!isShow ? (
-                <button
+                <div
                   onClick={() => setisShow(true)}
                   type="button"
-                  className="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                  class="text-white absolute end-5 bottom-2 cursor-pointer focus:ring-4 text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                 >
-                  bukak
-                </button>
+                  <svg class="cursor-pointer w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
+                    <path d="M18.85 1.1A1.99 1.99 0 0 0 17.063 0H2.937a2 2 0 0 0-1.566 3.242L6.99 9.868 7 14a1 1 0 0 0 .4.8l4 3A1 1 0 0 0 13 17l.01-7.134 5.66-6.676a1.99 1.99 0 0 0 .18-2.09Z"/>
+                  </svg>
+                </div>
               ) : (
-                <button
+                <div
                   onClick={() => setisShow(false)}
                   type="button"
-                  className="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                  class="text-white cursor-pointer absolute top-0 end-2.5 bottom-2.5 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                 >
                   tutup
-                </button>
+
+                  <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                  </svg>
+                </div>
               )}
 
                 {isShow && (<>
@@ -59,25 +65,25 @@ const Filter = () => {
               <div className="p-12 font-medium">
                 <h2 className="uppercase text-xl text-start">Ruangan</h2>
                 <div className="flex flex-wrap mt-8 gap-8">
-                  <span className="px-7 py-4 text-xl border rounded-full border-black hover:border-[#D90027] hover:text-[#D90027] cursor-pointer">
+                  <span className="px-7 py-4 text-xl bg-white border rounded-full border-black hover:border-[#D90027] hover:text-[#D90027] cursor-pointer">
                     Ruangan 1
                   </span>
-                  <span className="px-7 py-4 text-xl border rounded-full border-black hover:border-[#D90027] hover:text-[#D90027] cursor-pointer">
+                  <span className="px-7 py-4 text-xl bg-white border rounded-full border-black hover:border-[#D90027] hover:text-[#D90027] cursor-pointer">
                     Ruangan 1
                   </span>
-                  <span className="px-7 py-4 text-xl border rounded-full border-black hover:border-[#D90027] hover:text-[#D90027] cursor-pointer">
+                  <span className="px-7 py-4 text-xl bg-white border rounded-full border-black hover:border-[#D90027] hover:text-[#D90027] cursor-pointer">
                     Ruangan 1
                   </span>
-                  <span className="px-7 py-4 text-xl border rounded-full border-black hover:border-[#D90027] hover:text-[#D90027] cursor-pointer">
+                  <span className="px-7 py-4 text-xl bg-white border rounded-full border-black hover:border-[#D90027] hover:text-[#D90027] cursor-pointer">
                     Ruangan 1
                   </span>
-                  <span className="px-7 py-4 text-xl border rounded-full border-black hover:border-[#D90027] hover:text-[#D90027] cursor-pointer">
+                  <span className="px-7 py-4 text-xl bg-white border rounded-full border-black hover:border-[#D90027] hover:text-[#D90027] cursor-pointer">
                     Ruangan 1
                   </span>
-                  <span className="px-7 py-4 text-xl border rounded-full border-black hover:border-[#D90027] hover:text-[#D90027] cursor-pointer">
+                  <span className="px-7 py-4 text-xl bg-white border rounded-full border-black hover:border-[#D90027] hover:text-[#D90027] cursor-pointer">
                     Ruangan 1
                   </span>
-                  <span className="px-7 py-4 text-xl border rounded-full border-black hover:border-[#D90027] hover:text-[#D90027] cursor-pointer">
+                  <span className="px-7 py-4 text-xl bg-white border rounded-full border-black hover:border-[#D90027] hover:text-[#D90027] cursor-pointer">
                     Ruangan 1
                   </span>
                 </div>
@@ -85,25 +91,25 @@ const Filter = () => {
                   Jenis Kegiatan
                 </h2>
                 <div className="flex flex-wrap mt-8 gap-8">
-                  <span className="px-7 py-4 text-xl border rounded-full border-black hover:border-[#D90027] hover:text-[#D90027] cursor-pointer">
+                  <span className="px-7 py-4 text-xl bg-white border rounded-full border-black hover:border-[#D90027] hover:text-[#D90027] cursor-pointer">
                     Ruangan 1
                   </span>
-                  <span className="px-7 py-4 text-xl border rounded-full border-black hover:border-[#D90027] hover:text-[#D90027] cursor-pointer">
+                  <span className="px-7 py-4 text-xl bg-white border rounded-full border-black hover:border-[#D90027] hover:text-[#D90027] cursor-pointer">
                     Ruangan 1
                   </span>
-                  <span className="px-7 py-4 text-xl border rounded-full border-black hover:border-[#D90027] hover:text-[#D90027] cursor-pointer">
+                  <span className="px-7 py-4 text-xl bg-white border rounded-full border-black hover:border-[#D90027] hover:text-[#D90027] cursor-pointer">
                     Ruangan 1
                   </span>
-                  <span className="px-7 py-4 text-xl border rounded-full border-black hover:border-[#D90027] hover:text-[#D90027] cursor-pointer">
+                  <span className="px-7 py-4 text-xl bg-white border rounded-full border-black hover:border-[#D90027] hover:text-[#D90027] cursor-pointer">
                     Ruangan 1
                   </span>
-                  <span className="px-7 py-4 text-xl border rounded-full border-black hover:border-[#D90027] hover:text-[#D90027] cursor-pointer">
+                  <span className="px-7 py-4 text-xl bg-white border rounded-full border-black hover:border-[#D90027] hover:text-[#D90027] cursor-pointer">
                     Ruangan 1
                   </span>
-                  <span className="px-7 py-4 text-xl border rounded-full border-black hover:border-[#D90027] hover:text-[#D90027] cursor-pointer">
+                  <span className="px-7 py-4 text-xl bg-white border rounded-full border-black hover:border-[#D90027] hover:text-[#D90027] cursor-pointer">
                     Ruangan 1
                   </span>
-                  <span className="px-7 py-4 text-xl border rounded-full border-black hover:border-[#D90027] hover:text-[#D90027] cursor-pointer">
+                  <span className="px-7 py-4 text-xl bg-white border rounded-full border-black hover:border-[#D90027] hover:text-[#D90027] cursor-pointer">
                     Ruangan 1
                   </span>
                 </div>
@@ -125,19 +131,19 @@ const Filter = () => {
 
         <div className="px-32 mt-10">
           <div className="border rounded-full w-full flex flex-wrap justify-between gap-4 p-3">
-            <div className="hover:bg-[#D90027] hover:text-white rounded-full p-5 font-bold text-xl px-12">
+            <div className="hover:bg-[#D90027] hover:text-white rounded-full p-5 font-bold text-xl px-12 cursor-pointer">
               Kegiatan Hari ini
             </div>
-            <div className="hover:bg-[#D90027] hover:text-white rounded-full p-5 font-bold text-xl px-12">
+            <div className="hover:bg-[#D90027] hover:text-white rounded-full p-5 font-bold text-xl px-12 cursor-pointer">
               Minggu ini
             </div>
-            <div className="hover:bg-[#D90027] hover:text-white rounded-full p-5 font-bold text-xl px-12">
+            <div className="hover:bg-[#D90027] hover:text-white rounded-full p-5 font-bold text-xl px-12 cursor-pointer">
               Meeting
             </div>
-            <div className="hover:bg-[#D90027] hover:text-white rounded-full p-5 font-bold text-xl px-12">
+            <div className="hover:bg-[#D90027] hover:text-white rounded-full p-5 font-bold text-xl px-12 cursor-pointer">
               Workshop
             </div>
-            <div className="hover:bg-[#D90027] hover:text-white rounded-full p-5 font-bold text-xl px-12">
+            <div className="hover:bg-[#D90027] hover:text-white rounded-full p-5 font-bold text-xl px-12 cursor-pointer">
               Talkshow
             </div>
           </div>
