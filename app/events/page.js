@@ -3,7 +3,8 @@ import { initFlowbite } from "flowbite";
 import { Button } from "flowbite-react";
 import Image from "next/image";
 import { useEffect } from "react";
-import Filter from "../component/event/Filter";
+import Filter from "./components/Filter";
+import {CardEvent} from "@/app/component/card/CardEvent";
 
 export default function page() {
   useEffect(() => {
@@ -23,6 +24,7 @@ export default function page() {
       </Button>
       <div>
         <Filter/>
+          <CardEvent/>
       </div>
     </div>
   );
