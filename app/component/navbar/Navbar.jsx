@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Lexend_Peta } from "next/font/google";
 import Container from "../Container";
 import { useSession, signOut } from "next-auth/react";
-import GoogleSignInBtn from "@/components/GoogleSignInBtn";
+import GoogleSignInBtn from "@/app/component/GoogleSignInBtn";
 
 const lexend_peta = Lexend_Peta({ subsets: ['latin'], weight: ['400', '700'] })
 
