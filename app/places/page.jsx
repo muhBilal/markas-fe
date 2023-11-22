@@ -14,7 +14,6 @@ export default function page() {
     <div className="bg-white">
       <Button
         className="bg-[#D90027] fixed z-20 bottom-0 right-0 m-5 rounded-full w-[50px] h-[50px]"
-        href=""
       >
         <Image
           src={"/static/img/icon-float-btn.svg"}

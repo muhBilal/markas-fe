@@ -28,11 +28,11 @@ const Filter = () => {
             >
               Search
             </label>
-            <div class="relative bg-gray-100 items-center shadow-md w-full rounded-[2.5rem]">
+            <div className="relative bg-gray-100 items-center shadow-md w-full rounded-[2.5rem]">
               <input
                 type="search"
                 id="default-search"
-                class="block w-full p-7 text-2xl text-gray-900 border-none pr-20 placeholder:text-gray-400 font-light placeholder:text-lg xl:placeholder:text-2xl rounded-full bg-white shadow-lg focus:ring-red-500 focus:border-red-500"
+                className="block w-full p-7 text-2xl text-gray-900 border-none pr-20 placeholder:text-gray-400 font-light placeholder:text-lg xl:placeholder:text-2xl rounded-full bg-white shadow-lg focus:ring-red-500 focus:border-red-500"
                 placeholder="Cari “Kota Surabaya” atau “Sidosermo”"
                 required
               />
