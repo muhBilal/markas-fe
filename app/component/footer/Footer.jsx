@@ -1,4 +1,5 @@
 import { Lexend_Peta } from "next/font/google";
+import Image from "next/image";
 
 const lexend_peta = Lexend_Peta({ subsets: ['latin'], weight: ['400', '700'] })
 
@@ -6,6 +7,7 @@ const lexend_peta = Lexend_Peta({ subsets: ['latin'], weight: ['400', '700'] })
 const Footer = () => {
     return (
         <footer>
+
             <div className="mt-32 bg-[#D90027] border-t-[1.5px] border-black" >
                 <div className="py-4 px-12 ">
                     <div className="p-8 relative z-20 bottom-16 flex flex-col-reverse  lg:grid lg:grid-cols-3 gap-y-4 bg-white rounded-lg border-[1px] border-black">
@@ -47,7 +49,6 @@ const Footer = () => {
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>

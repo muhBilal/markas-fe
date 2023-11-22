@@ -17,6 +17,7 @@ import Lokasi from './component/Lokasi';
 import Event from './component/home/Event';
 import { Button } from 'flowbite-react';
 import Link from 'next/link';
+import Karakteristik from './component/Karakteristik';
 
 export default function Home() {
   useEffect(() => {
@@ -26,8 +27,8 @@ export default function Home() {
   return (
     <div className='bg-white'>
       <Button
-        className='bg-[#D90027] fixed z-20 bottom-0 right-0 m-5 rounded-full w-[50px] h-[50px]'
-        href=''
+        className='bg-[#D90027] fixed z-50 bottom-0 right-0 m-5 rounded-full w-[50px] h-[50px]'
+        href='#top'
       >
         <Image
           src={'/static/img/icon-float-btn.svg'}
@@ -36,13 +37,13 @@ export default function Home() {
         />
 
       </Button>
-      <div>
+      <div id="top">
         <Hero />
         <Marquee />
         <Event />
         {/* <OrderStep /> */}
         <Filosofi />
-        <div className='my-32 bg-[#D90027] flex flex-col gap-y-8  p-16 text-center '>
+        <div className='bg-[#D90027] flex flex-col gap-y-8  p-16 text-center '>
           <h2 className='uppercase font-extrabold text-4xl text-white'>Mari Berkolaborasi</h2>
           <div className='flex justify-center'>
             <Link
@@ -52,6 +53,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
+        <Karakteristik />
         <CardPhoto />
         <CardKerjaSama />
         <Join />
