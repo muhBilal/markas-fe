@@ -6,7 +6,7 @@ import Filosofi from '../component/about/Filosofi';
 import Karakteristik from '../component/Karakteristik';
 import CardKerjaSama from '../component/card/CardKerjasama';
 import Kolaborasi from '../component/about/Kolaborasi';
-const lexend_peta = Lexend_Peta({ subsets: ['latin'], weight: ['400', '700'] })
+const lexend_peta = Lexend_Peta({ subsets: ['latin'], weight: ['400', '700'] });
 
 export default function page() {
     return (

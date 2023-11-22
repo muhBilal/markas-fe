@@ -7,17 +7,22 @@ import { AppProgressBar as ProgressBar } from "next-nprogress-bar";
 import NextAuthProviders from "@/app/component/NextAuthProviders";
 import { useEffect, useState } from "react";
 import SplashScreen from "./component/SplashScreen";
+import { usePathname } from "next/navigation";
+import { Fade } from "react-awesome-reveal";
 
 const lexend_deca = Lexend_Deca({ subsets: ["latin"] });
 
 export default function RootLayout({ children }) {
   const [isReady, setIsReady] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     setTimeout(() => {
       setIsReady(true);
     }, 1500);
-  }, []);
+
+    return () => setIsReady(false);
+  }, [pathname]);
   return (
     <html lang="en">
       <body className={`${lexend_deca.className} max-w-[1920px] mx-auto `}>
@@ -30,7 +35,9 @@ export default function RootLayout({ children }) {
             </div>
           </NextAuthProviders>
         ) : (
-          <SplashScreen />
+          <Fade>
+            <SplashScreen />
+          </Fade>
         )}
 
         <ProgressBar
