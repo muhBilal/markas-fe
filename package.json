@@ -9,8 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@aldabil/react-scheduler": "^2.7.26",
     "@emotion/react": "^11.11.1",
-    "@ericz1803/react-google-calendar": "^4.3.1",
+    "@emotion/styled": "^11.11.0",
     "aos": "^2.3.4",
     "flowbite": "^2.1.1",
     "flowbite-react": "^0.6.4",
