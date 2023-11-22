@@ -1,15 +1,164 @@
 import React from 'react'
 
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { FaStar } from "react-icons/fa";
+
+import { RxCaretLeft, RxCaretRight } from "react-icons/rx";
+import Container from './Container';
+import Image from 'next/image';
+
+
+
+
 const Wave = () => {
   return (
-    <div className='bg-svg'>
-        {/* <svg width="w-full" viewBox="0 0 1440 320" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M-679.391 178.97L-681 179.291V180.932V932V934H-679H1687H1689V932V7V3.70739L1686.08 5.22516C1611.4 44.0161 1456.14 84.3613 1258.53 105.671C1061 126.973 821.377 129.229 578.086 91.9878C223.777 37.7528 44.0114 32.6365 -114.582 54.562C-193.852 65.5211 -267.792 83.2308 -355.507 104.885C-361.795 106.437 -368.154 108.01 -374.591 109.601C-457.961 130.219 -554.434 154.078 -679.391 178.97Z" fill="#D90027" stroke="black" stroke-width="4"/>
-        </svg> */}
+    <div className="bg-[url('/vector-wave.svg')]">
+      <Container>
+        <div className="py-32">
+          <div className=" py-8">
+            <div className="grid grid-cols-2 items-center">
+              <div className="">
+                <h2 className="uppercase font-extrabold text-2xl text-white">Apa Kata Mereka</h2>
+                <h2 className=" flex items-center gap-x-1 font-light text-lg text-white "><FaStar className=' text-yellow-300' /> 4.6 | Ulasan di Google</h2>
+              </div>
+              <div className="flex gap-x-4 justify-end">
+                <button className="border-white border-[2px] rounded-full  px-2 py-2">
+                  <RxCaretLeft className="text-4xl text-white font-extrabold" />
+                </button>
+                <button className="border-white border-[2px] rounded-full  px-2 py-2">
+                  <RxCaretRight className="text-4xl text-white font-extrabold" />
+                </button>
+              </div>
+            </div>
 
-        <div className="bg-primary">
-          
+
+
+          </div>
+
+
+          <Swiper
+            spaceBetween={50}
+            slidesPerView={2}
+            onSlideChange={() => console.log('slide change')}
+            onSwiper={(swiper) => console.log(swiper)}
+            className=""
+          >
+
+            <SwiperSlide>
+              <div className="flex flex-col gap-4">
+                <div className="flex flex-row gap-4 text-white">
+                  <Image
+                    src={'/static/img/profile.png'}
+                    width={50}
+                    height={50}
+                  />
+                  <div className="flex flex-col gap-1">
+                    <h2 className='font-bold'>Lexi Handi Nayana</h2>
+                    <h2 className='font-light'>Lexi Handi Nayana</h2>
+                  </div>
+                </div>
+                <div className="flex gap-2">
+                  <FaStar className=' text-yellow-300' />
+                  <FaStar className=' text-yellow-300' />
+                  <FaStar className=' text-yellow-300' />
+                </div>
+
+                <p className='text-white font-normal'>Kami memulai perjalanan kami di MARKAS dan tidak pernah menyesalinya. Tempat yang penuh dengan sumber daya dan inspirasi.</p>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="flex flex-col gap-4">
+                <div className="flex flex-row gap-4 text-white">
+                  <Image
+                    src={'/static/img/profile.png'}
+                    width={50}
+                    height={50}
+                  />
+                  <div className="flex flex-col gap-1">
+                    <h2 className='font-bold'>Lexi Handi Nayana</h2>
+                    <h2 className='font-light'>Lexi Handi Nayana</h2>
+                  </div>
+                </div>
+                <div className="flex gap-2">
+                  <FaStar className=' text-yellow-300' />
+                  <FaStar className=' text-yellow-300' />
+                  <FaStar className=' text-yellow-300' />
+                </div>
+
+                <p className='text-white font-normal'>Kami memulai perjalanan kami di MARKAS dan tidak pernah menyesalinya. Tempat yang penuh dengan sumber daya dan inspirasi.</p>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="flex flex-col gap-4">
+                <div className="flex flex-row gap-4 text-white">
+                  <Image
+                    src={'/static/img/profile.png'}
+                    width={50}
+                    height={50}
+                  />
+                  <div className="flex flex-col gap-1">
+                    <h2 className='font-bold'>Lexi Handi Nayana</h2>
+                    <h2 className='font-light'>Lexi Handi Nayana</h2>
+                  </div>
+                </div>
+                <div className="flex gap-2">
+                  <FaStar className=' text-yellow-300' />
+                  <FaStar className=' text-yellow-300' />
+                  <FaStar className=' text-yellow-300' />
+                </div>
+
+                <p className='text-white font-normal'>Kami memulai perjalanan kami di MARKAS dan tidak pernah menyesalinya. Tempat yang penuh dengan sumber daya dan inspirasi.</p>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="flex flex-col gap-4">
+                <div className="flex flex-row gap-4 text-white">
+                  <Image
+                    src={'/static/img/profile.png'}
+                    width={50}
+                    height={50}
+                  />
+                  <div className="flex flex-col gap-1">
+                    <h2 className='font-bold'>Lexi Handi Nayana</h2>
+                    <h2 className='font-light'>Lexi Handi Nayana</h2>
+                  </div>
+                </div>
+                <div className="flex gap-2">
+                  <FaStar className=' text-yellow-300' />
+                  <FaStar className=' text-yellow-300' />
+                  <FaStar className=' text-yellow-300' />
+                </div>
+
+                <p className='text-white font-normal'>Kami memulai perjalanan kami di MARKAS dan tidak pernah menyesalinya. Tempat yang penuh dengan sumber daya dan inspirasi.</p>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="flex flex-col gap-4">
+                <div className="flex flex-row gap-4 text-white">
+                  <Image
+                    src={'/static/img/profile.png'}
+                    width={50}
+                    height={50}
+                  />
+                  <div className="flex flex-col gap-1">
+                    <h2 className='font-bold'>Lexi Handi Nayana</h2>
+                    <h2 className='font-light'>Lexi Handi Nayana</h2>
+                  </div>
+                </div>
+                <div className="flex gap-2">
+                  <FaStar className=' text-yellow-300' />
+                  <FaStar className=' text-yellow-300' />
+                  <FaStar className=' text-yellow-300' />
+                </div>
+
+                <p className='text-white font-normal'>Kami memulai perjalanan kami di MARKAS dan tidak pernah menyesalinya. Tempat yang penuh dengan sumber daya dan inspirasi.</p>
+              </div>
+            </SwiperSlide>
+
+          </Swiper>
+
         </div>
+      </Container >
     </div>
   )
 }
