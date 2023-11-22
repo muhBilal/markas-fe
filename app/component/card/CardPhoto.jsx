@@ -12,7 +12,7 @@ const CardPhoto = () => {
             <div className="py-12 flex flex-col gap-y-6 ">
                 <Marquee speed={40} pauseOnHover direction={'left'}>
                     <div className={`mx-3 whitespace-nowrap grid grid-cols-4 gap-x-6`}>
-                    <Image
+                        <Image
                             src={'/static/img/kolaborasi.png'}
                             width={500}
                             height={500}
