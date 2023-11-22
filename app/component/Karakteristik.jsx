@@ -1,6 +1,6 @@
 import { Lexend_Peta } from "next/font/google";
 import Link from "next/link";
-import Container from "../Container";
+import Container from "./Container";
 import Image from "next/image";
 const lexend_peta = Lexend_Peta({ subsets: ['latin'], weight: ['400', '700'] })
 

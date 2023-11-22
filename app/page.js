@@ -17,7 +17,7 @@ import Lokasi from './component/Lokasi';
 import Event from './component/home/Event';
 import { Button } from 'flowbite-react';
 import Link from 'next/link';
-import Karakteristik from './component/home/Karakteristik';
+import Karakteristik from './component/Karakteristik';
 
 export default function Home() {
   useEffect(() => {
