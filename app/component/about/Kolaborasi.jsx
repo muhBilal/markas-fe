@@ -15,37 +15,52 @@ const Kolaborasi = () => {
                 </div>
                 <div className="py-12 flex flex-col gap-y-6 ">
                     <Marquee speed={20} pauseOnHover>
-                        <div className={`mx-3 whitespace-nowrap grid grid-cols-5 gap-x-6`}>
-                            <Image
-                                src={'/static/img/kolaborasi.png'}
-                                width={300}
-                                height={300}
-                                className="rounded-xl"
-                            />
-                            <Image
-                                src={'/static/img/kolaborasi.png'}
-                                width={300}
-                                height={300}
-                                className="rounded-xl"
-                            />
-                            <Image
-                                src={'/static/img/kolaborasi.png'}
-                                width={300}
-                                height={300}
-                                className="rounded-xl"
-                            />
-                            <Image
-                                src={'/static/img/kolaborasi.png'}
-                                width={300}
-                                height={300}
-                                className="rounded-xl"
-                            />
-                            <Image
-                                src={'/static/img/kolaborasi.png'}
-                                width={300}
-                                height={300}
-                                className="rounded-xl"
-                            />
+                        <div className={`mx-3 whitespace-nowrap grid grid-cols-8 gap-x-6`}>
+                            <div className="flex flex-wrap rounded-xl mt-12 ">
+                                <div className="flex flex-col max-w-sm text-center gap-y-6 p-6 bg-white border border-gray-200 rounded-lg shadow ">
+                                    <h2 className="text-4xl">👩‍💻👨‍💻</h2>
+                                    <h2 className="text-2xl">Founder Startup</h2>
+                                    <h2 className="text-xl whitespace-break-spaces">Tim Founder yang terdiri dari Hustler, Hipster, dan Hacker mendapatkan ruang yang luas untuk bereksplorasi dan mewujudkan startupnya.</h2>
+                                </div>
+                            </div>
+                            <div className="flex flex-wrap rounded-xl ">
+                                <div className="flex flex-col max-w-sm text-center gap-y-6 p-6 bg-white border border-gray-200 rounded-lg shadow ">
+                                    <h2 className="text-4xl">👩‍🎓👨‍🎓</h2>
+                                    <h2 className="text-2xl">Pakar Pendidikan</h2>
+                                    <h2 className="text-xl whitespace-break-spaces">Akademisi pendidikan dari berbagai universitas dan bidang akan berkolaborasi bersama dalam penelitian agar tercapainya validasi yang diperlukan.</h2>
+                                </div>
+                            </div>
+                            <div className="flex flex-wrap rounded-xl mt-12 ">
+                                <div className="flex flex-col max-w-sm text-center gap-y-6 p-6 bg-white border border-gray-200 rounded-lg shadow ">
+                                    <h2 className="text-4xl">👩‍💼👨‍💼</h2>
+                                    <h2 className="text-2xl">Founder Startup</h2>
+                                    <h2 className="text-xl whitespace-break-spaces">Tim Founder yang terdiri dari Hustler, Hipster, dan Hacker mendapatkan ruang yang luas untuk bereksplorasi dan mewujudkan startupnya.</h2>
+                                </div>
+                            </div>
+                            <div className="flex flex-wrap rounded-xl ">
+                                <div className="flex flex-col max-w-sm text-center gap-y-6 p-6 bg-white border border-gray-200 rounded-lg shadow ">
+                                    <h2 className="text-3xl">👩‍💻👨‍💻</h2>
+                                    <h2 className="text-2xl">Founder Startup</h2>
+                                    <h2 className="text-xl whitespace-break-spaces">Tim Founder yang terdiri dari Hustler, Hipster, dan Hacker mendapatkan ruang yang luas untuk bereksplorasi dan mewujudkan startupnya.</h2>
+                                </div>
+                            </div>
+                            <div className="flex flex-wrap rounded-xl mt-12 ">
+                                <div className="flex flex-col max-w-sm text-center gap-y-6 p-6 bg-white border border-gray-200 rounded-lg shadow ">
+                                    <h2 className="text-3xl">👩‍💻👨‍💻</h2>
+                                    <h2 className="text-2xl">Founder Startup</h2>
+                                    <h2 className="text-xl whitespace-break-spaces">Tim Founder yang terdiri dari Hustler, Hipster, dan Hacker mendapatkan ruang yang luas untuk bereksplorasi dan mewujudkan startupnya.</h2>
+                                </div>
+                            </div>
+                            <div className="flex flex-wrap rounded-xl ">
+                                <div className="flex flex-col max-w-sm text-center gap-y-6 p-6 bg-white border border-gray-200 rounded-lg shadow ">
+                                    <h2 className="text-3xl">👩‍💻👨‍💻</h2>
+                                    <h2 className="text-2xl">Founder Startup</h2>
+                                    <h2 className="text-xl whitespace-break-spaces">Tim Founder yang terdiri dari Hustler, Hipster, dan Hacker mendapatkan ruang yang luas untuk bereksplorasi dan mewujudkan startupnya.</h2>
+                                </div>
+                            </div>
+
+
+
                         </div>
 
                     </Marquee >
