@@ -28,11 +28,11 @@ const Filter = () => {
             >
               Search
             </label>
-            <div class="relative bg-gray-100 shadow-md w-full rounded-[2.5rem]">
+            <div class="relative bg-gray-100 items-center shadow-md w-full rounded-[2.5rem]">
               <input
                 type="search"
                 id="default-search"
-                class="block w-full p-7 text-sm text-gray-900 border-none pr-20 placeholder:text-gray-400 font-light placeholder:text-2xl rounded-full bg-white shadow-lg focus:ring-red-500 focus:border-red-500"
+                class="block w-full p-7 text-sm text-gray-900 border-none pr-20 placeholder:text-gray-400 font-light placeholder:text-lg xl:placeholder:text-2xl rounded-full bg-white shadow-lg focus:ring-red-500 focus:border-red-500"
                 placeholder="Cari event yang ada di MARKAS Surabaya"
                 required
               />
@@ -43,7 +43,7 @@ const Filter = () => {
                   class="text-white absolute end-5 bottom-2 cursor-pointer focus:ring-4 text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                 >
                   <svg class="cursor-pointer w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
-                    <path d="M18.85 1.1A1.99 1.99 0 0 0 17.063 0H2.937a2 2 0 0 0-1.566 3.242L6.99 9.868 7 14a1 1 0 0 0 .4.8l4 3A1 1 0 0 0 13 17l.01-7.134 5.66-6.676a1.99 1.99 0 0 0 .18-2.09Z"/>
+                    <path d="M18.85 1.1A1.99 1.99 0 0 0 17.063 0H2.937a2 2 0 0 0-1.566 3.242L6.99 9.868 7 14a1 1 0 0 0 .4.8l4 3A1 1 0 0 0 13 17l.01-7.134 5.66-6.676a1.99 1.99 0 0 0 .18-2.09Z" />
                   </svg>
                 </div>
               ) : (
@@ -55,95 +55,95 @@ const Filter = () => {
                   tutup
 
                   <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
                   </svg>
                 </div>
               )}
 
-                {isShow && (<>
-                
-              <div className="p-12 font-medium">
-                <h2 className="uppercase text-xl text-start">Ruangan</h2>
-                <div className="flex flex-wrap mt-8 gap-8">
-                  <span className="px-7 py-4 text-xl bg-white border rounded-full border-black hover:border-[#D90027] hover:text-[#D90027] cursor-pointer">
-                    Ruangan 1
-                  </span>
-                  <span className="px-7 py-4 text-xl bg-white border rounded-full border-black hover:border-[#D90027] hover:text-[#D90027] cursor-pointer">
-                    Ruangan 1
-                  </span>
-                  <span className="px-7 py-4 text-xl bg-white border rounded-full border-black hover:border-[#D90027] hover:text-[#D90027] cursor-pointer">
-                    Ruangan 1
-                  </span>
-                  <span className="px-7 py-4 text-xl bg-white border rounded-full border-black hover:border-[#D90027] hover:text-[#D90027] cursor-pointer">
-                    Ruangan 1
-                  </span>
-                  <span className="px-7 py-4 text-xl bg-white border rounded-full border-black hover:border-[#D90027] hover:text-[#D90027] cursor-pointer">
-                    Ruangan 1
-                  </span>
-                  <span className="px-7 py-4 text-xl bg-white border rounded-full border-black hover:border-[#D90027] hover:text-[#D90027] cursor-pointer">
-                    Ruangan 1
-                  </span>
-                  <span className="px-7 py-4 text-xl bg-white border rounded-full border-black hover:border-[#D90027] hover:text-[#D90027] cursor-pointer">
-                    Ruangan 1
-                  </span>
+              {isShow && (<>
+
+                <div className="p-12 font-medium">
+                  <h2 className="uppercase text-xl text-start">Ruangan</h2>
+                  <div className="flex flex-wrap mt-8 gap-8">
+                    <span className="px-3 py-1 xl:px-7 xl:py-4 xl:text-xl bg-white border rounded-full border-black hover:border-[#D90027] hover:text-[#D90027] cursor-pointer">
+                      Ruangan 1
+                    </span>
+                    <span className="px-3 py-1 xl:px-7 xl:py-4 xl:text-xl bg-white border rounded-full border-black hover:border-[#D90027] hover:text-[#D90027] cursor-pointer">
+                      Ruangan 1
+                    </span>
+                    <span className="px-3 py-1 xl:px-7 xl:py-4 xl:text-xl bg-white border rounded-full border-black hover:border-[#D90027] hover:text-[#D90027] cursor-pointer">
+                      Ruangan 1
+                    </span>
+                    <span className="px-3 py-1 xl:px-7 xl:py-4 xl:text-xl bg-white border rounded-full border-black hover:border-[#D90027] hover:text-[#D90027] cursor-pointer">
+                      Ruangan 1
+                    </span>
+                    <span className="px-3 py-1 xl:px-7 xl:py-4 xl:text-xl bg-white border rounded-full border-black hover:border-[#D90027] hover:text-[#D90027] cursor-pointer">
+                      Ruangan 1
+                    </span>
+                    <span className="px-3 py-1 xl:px-7 xl:py-4 xl:text-xl bg-white border rounded-full border-black hover:border-[#D90027] hover:text-[#D90027] cursor-pointer">
+                      Ruangan 1
+                    </span>
+                    <span className="px-3 py-1 xl:px-7 xl:py-4 xl:text-xl bg-white border rounded-full border-black hover:border-[#D90027] hover:text-[#D90027] cursor-pointer">
+                      Ruangan 1
+                    </span>
+                  </div>
+                  <h2 className="uppercase text-xl text-start mt-10">
+                    Jenis Kegiatan
+                  </h2>
+                  <div className="flex flex-wrap mt-8 gap-8">
+                    <span className="px-3 py-1 xl:px-7 xl:py-4 xl:text-xl bg-white border rounded-full border-black hover:border-[#D90027] hover:text-[#D90027] cursor-pointer">
+                      Ruangan 1
+                    </span>
+                    <span className="px-3 py-1 xl:px-7 xl:py-4 xl:text-xl bg-white border rounded-full border-black hover:border-[#D90027] hover:text-[#D90027] cursor-pointer">
+                      Ruangan 1
+                    </span>
+                    <span className="px-3 py-1 xl:px-7 xl:py-4 xl:text-xl bg-white border rounded-full border-black hover:border-[#D90027] hover:text-[#D90027] cursor-pointer">
+                      Ruangan 1
+                    </span>
+                    <span className="px-3 py-1 xl:px-7 xl:py-4 xl:text-xl bg-white border rounded-full border-black hover:border-[#D90027] hover:text-[#D90027] cursor-pointer">
+                      Ruangan 1
+                    </span>
+                    <span className="px-3 py-1 xl:px-7 xl:py-4 xl:text-xl bg-white border rounded-full border-black hover:border-[#D90027] hover:text-[#D90027] cursor-pointer">
+                      Ruangan 1
+                    </span>
+                    <span className="px-3 py-1 xl:px-7 xl:py-4 xl:text-xl bg-white border rounded-full border-black hover:border-[#D90027] hover:text-[#D90027] cursor-pointer">
+                      Ruangan 1
+                    </span>
+                    <span className="px-3 py-1 xl:px-7 xl:py-4 xl:text-xl bg-white border rounded-full border-black hover:border-[#D90027] hover:text-[#D90027] cursor-pointer">
+                      Ruangan 1
+                    </span>
+                  </div>
+                  <h2 className="uppercase text-xl text-start mt-10">Ruangan</h2>
+                  {/* tanggal kegiatan pke datepicker */}
+                  <div className="flex flex-col md:flex-row gap-5 mt-10">
+                    <button className="rounded-full border text-[#D90027] border-[#D90027] p-4 md:px-8">
+                      Clear Filter
+                    </button>
+                    <button className="text-white rounded-full bg-[#D90027] p-4 md:px-8">
+                      Apply Filter
+                    </button>
+                  </div>
                 </div>
-                <h2 className="uppercase text-xl text-start mt-10">
-                  Jenis Kegiatan
-                </h2>
-                <div className="flex flex-wrap mt-8 gap-8">
-                  <span className="px-7 py-4 text-xl bg-white border rounded-full border-black hover:border-[#D90027] hover:text-[#D90027] cursor-pointer">
-                    Ruangan 1
-                  </span>
-                  <span className="px-7 py-4 text-xl bg-white border rounded-full border-black hover:border-[#D90027] hover:text-[#D90027] cursor-pointer">
-                    Ruangan 1
-                  </span>
-                  <span className="px-7 py-4 text-xl bg-white border rounded-full border-black hover:border-[#D90027] hover:text-[#D90027] cursor-pointer">
-                    Ruangan 1
-                  </span>
-                  <span className="px-7 py-4 text-xl bg-white border rounded-full border-black hover:border-[#D90027] hover:text-[#D90027] cursor-pointer">
-                    Ruangan 1
-                  </span>
-                  <span className="px-7 py-4 text-xl bg-white border rounded-full border-black hover:border-[#D90027] hover:text-[#D90027] cursor-pointer">
-                    Ruangan 1
-                  </span>
-                  <span className="px-7 py-4 text-xl bg-white border rounded-full border-black hover:border-[#D90027] hover:text-[#D90027] cursor-pointer">
-                    Ruangan 1
-                  </span>
-                  <span className="px-7 py-4 text-xl bg-white border rounded-full border-black hover:border-[#D90027] hover:text-[#D90027] cursor-pointer">
-                    Ruangan 1
-                  </span>
-                </div>
-                <h2 className="uppercase text-xl text-start mt-10">Ruangan</h2>
-                {/* tanggal kegiatan pke datepicker */}
-                <div className="flex gap-5 mt-10">
-                  <button className="rounded-full border text-[#D90027] border-[#D90027] p-4 px-8">
-                    Clear Filter
-                  </button>
-                  <button className="text-white rounded-full bg-[#D90027] p-4 px-8">
-                    Apply Filter
-                  </button>
-                </div>
-              </div>
               </>)}
             </div>
           </form>
         </div>
 
         <div className="px-32 mt-10">
-          <div className="border rounded-full w-full flex flex-wrap justify-between gap-4 p-3">
-            <div className="hover:bg-[#D90027] hover:text-white rounded-full p-5 font-bold text-xl px-12 cursor-pointer">
+          <div className="border justify-center rounded-xl  sm:rounded-full w-full items-center flex flex-wrap  text-center lg:text-left sm:justify-between gap-4 p-6 xl:p-3">
+            <div className="hover:bg-[#D90027] hover:text-white rounded-full  font-bold text-lg xl:text-xl px-4  lg:px-6 2xl:px-12 cursor-pointer">
               Kegiatan Hari ini
             </div>
-            <div className="hover:bg-[#D90027] hover:text-white rounded-full p-5 font-bold text-xl px-12 cursor-pointer">
+            <div className="hover:bg-[#D90027] hover:text-white rounded-full  font-bold text-lg xl:text-xl px-4  lg:px-6 2xl:px-12 cursor-pointer">
               Minggu ini
             </div>
-            <div className="hover:bg-[#D90027] hover:text-white rounded-full p-5 font-bold text-xl px-12 cursor-pointer">
+            <div className="hover:bg-[#D90027] hover:text-white rounded-full  font-bold text-lg xl:text-xl px-4  lg:px-6 2xl:px-12 cursor-pointer">
               Meeting
             </div>
-            <div className="hover:bg-[#D90027] hover:text-white rounded-full p-5 font-bold text-xl px-12 cursor-pointer">
+            <div className="hover:bg-[#D90027] hover:text-white rounded-full  font-bold text-lg xl:text-xl px-4  lg:px-6 2xl:px-12 cursor-pointer">
               Workshop
             </div>
-            <div className="hover:bg-[#D90027] hover:text-white rounded-full p-5 font-bold text-xl px-12 cursor-pointer">
+            <div className="hover:bg-[#D90027] hover:text-white rounded-full  font-bold text-lg xl:text-xl px-4  lg:px-6 2xl:px-12 cursor-pointer">
               Talkshow
             </div>
           </div>
