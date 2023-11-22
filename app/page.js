@@ -10,8 +10,8 @@ import OrderStep from './component/home/OrderStep'
 import { initFlowbite } from "flowbite";
 import { useEffect } from "react";
 import Filosofi from './component/home/Filosofi';
-import CardPhoto from './component/CardPhoto';
-import CardKerjaSama from './component/CardKerjasama';
+import CardPhoto from './component/card/CardPhoto';
+import CardKerjaSama from './component/card/CardKerjasama';
 import Join from './component/home/Join';
 import Lokasi from './component/Lokasi';
 import Event from './component/home/Event';
