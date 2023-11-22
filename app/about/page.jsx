@@ -14,8 +14,8 @@ export default function page() {
             <Hero />
             <div className="py-32">
                 <div className="flex flex-col gap-y-8 text-center">
-                    <h2 className={`${lexend_peta.className} text-8xl font-semibold text-[#D90027]`}>MARKAS</h2>
-                    <span className='text-4xl font-light'>A hub for startup founders to grow with the ecosystem.</span>
+                    <h2 className={`${lexend_peta.className} text-6xl lg:text-8xl font-semibold text-[#D90027]`}>MARKAS</h2>
+                    <span className='text-xl md:text-4xl font-light'>A hub for startup founders to grow with the ecosystem.</span>
                 </div>
             </div>
             <Filosofi />

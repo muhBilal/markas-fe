@@ -4,7 +4,7 @@ import "./globals.css";
 import Navbar from "./component/navbar/Navbar";
 import Footer from "./component/footer/Footer";
 import { AppProgressBar as ProgressBar } from "next-nprogress-bar";
-import NextAuthProviders from "@/components/NextAuthProviders";
+import NextAuthProviders from "@/app/component/NextAuthProviders";
 
 const lexend_deca = Lexend_Deca({ subsets: ["latin"] });
 
