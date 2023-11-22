@@ -3,13 +3,7 @@ import { Lexend_Peta } from "next/font/google";
 import { TypeAnimation } from 'react-type-animation';
 
 const lexend_peta = Lexend_Peta({ subsets: ['latin'], weight: ['400', '700'] })
-const TextType = (children) => {
-    return (
-        <span className="font-light text-xl md:text-2xl text-center">
-            Ini cerita tentang <span className={`${lexend_peta.className} text-[#D90027]`}>MARKAS</span> kita...
-        </span>
-    )
-}
+
 const Hero = () => {
 
     return (
@@ -18,7 +12,7 @@ const Hero = () => {
              bg-black/80 backdrop-brightness-75 text-white">
                 <TypeAnimation
                     sequence={[
-                        ' Ini cerita tentang <span className={`${lexend_peta.className} text-[#D90027]`}>MARKAS</span> kita...',
+                        'Ini cerita tentang <span className={`${lexend_peta.className} text-primary`}>MARKAS</span> kita...',
                         500,
                     ]}
                     speed={50}
