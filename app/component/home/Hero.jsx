@@ -1,7 +1,6 @@
 import { Lexend_Peta } from "next/font/google";
 import { useEffect, useState } from "react";
 import ReactTextTransition, { presets } from "react-text-transition";
-import { texts } from "../../utils/heroText"
 const lexend_peta = Lexend_Peta({ subsets: ['latin'], weight: ['400', '700'] })
 const TEXTS = ["Grow", "Connect", "Collaborate", "Code"];
 
