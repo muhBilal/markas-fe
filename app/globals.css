@@ -29,3 +29,7 @@ body {
 .row-title-text {
   font-weight: 600;
 }
+
+.bg-svg{
+  background-image: url('/vector-wave.svg');
+}

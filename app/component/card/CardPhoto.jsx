@@ -10,80 +10,61 @@ const CardPhoto = () => {
             <h2 className="uppercase text-center text-2xl md:text-4xl font-extrabold">Kami menunggumu di markas!</h2>
 
             <div className="py-12 flex flex-col gap-y-6 ">
-                <Marquee speed={20} pauseOnHover>
-                    <div className={`mx-3 whitespace-nowrap grid grid-cols-5 gap-x-6`}>
-                        <Image
+                <Marquee speed={40} pauseOnHover direction={'left'}>
+                    <div className={`mx-3 whitespace-nowrap grid grid-cols-4 gap-x-6`}>
+                    <Image
                             src={'/static/img/kolaborasi.png'}
-                            width={300}
-                            height={300}
+                            width={500}
+                            height={500}
                             className="rounded-xl"
                         />
                         <Image
                             src={'/static/img/kolaborasi.png'}
-                            width={300}
-                            height={300}
+                            width={500}
+                            height={500}
                             className="rounded-xl"
                         />
                         <Image
                             src={'/static/img/kolaborasi.png'}
-                            width={300}
-                            height={300}
+                            width={500}
+                            height={500}
                             className="rounded-xl"
                         />
                         <Image
                             src={'/static/img/kolaborasi.png'}
-                            width={300}
-                            height={300}
-                            className="rounded-xl"
-                        />
-                        <Image
-                            src={'/static/img/kolaborasi.png'}
-                            width={300}
-                            height={300}
+                            width={500}
+                            height={500}
                             className="rounded-xl"
                         />
                     </div>
 
                 </Marquee >
-                <Marquee speed={30} pauseOnHover>
-                    <div className={`mx-3 whitespace-nowrap grid grid-cols-6 gap-x-6  `}>
+                <Marquee speed={40} pauseOnHover direction={'right'}>
+                    <div className={`mx-3 whitespace-nowrap grid grid-cols-4 gap-x-6  `}>
                         <Image
                             src={'/static/img/kolaborasi.png'}
-                            width={300}
-                            height={300}
+                            width={500}
+                            height={500}
                             className="rounded-xl"
                         />
                         <Image
                             src={'/static/img/kolaborasi.png'}
-                            width={300}
-                            height={300}
+                            width={500}
+                            height={500}
                             className="rounded-xl"
                         />
                         <Image
                             src={'/static/img/kolaborasi.png'}
-                            width={300}
-                            height={300}
+                            width={500}
+                            height={500}
                             className="rounded-xl"
                         />
                         <Image
                             src={'/static/img/kolaborasi.png'}
-                            width={300}
-                            height={300}
+                            width={500}
+                            height={500}
                             className="rounded-xl"
                         />
-                        <Image
-                            src={'/static/img/kolaborasi.png'}
-                            width={300}
-                            height={300}
-                            className="rounded-xl"
-                        />
-                        <Image
-                            src={'/static/img/kolaborasi.png'}
-                            width={300}
-                            height={300}
-                            className="rounded-xl"
-                        />
-
                     </div>
 
                 </Marquee >
