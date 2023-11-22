@@ -48,6 +48,7 @@ const Wave = () => {
               <div className="flex flex-col gap-4">
                 <div className="flex flex-row gap-4 text-white">
                   <Image
+      alt="image"
                     src={'/static/img/profile.png'}
                     width={50}
                     height={50}
@@ -70,6 +71,7 @@ const Wave = () => {
               <div className="flex flex-col gap-4">
                 <div className="flex flex-row gap-4 text-white">
                   <Image
+      alt="image"
                     src={'/static/img/profile.png'}
                     width={50}
                     height={50}
@@ -92,6 +94,7 @@ const Wave = () => {
               <div className="flex flex-col gap-4">
                 <div className="flex flex-row gap-4 text-white">
                   <Image
+      alt="image"
                     src={'/static/img/profile.png'}
                     width={50}
                     height={50}
@@ -114,6 +117,7 @@ const Wave = () => {
               <div className="flex flex-col gap-4">
                 <div className="flex flex-row gap-4 text-white">
                   <Image
+      alt="image"
                     src={'/static/img/profile.png'}
                     width={50}
                     height={50}
@@ -136,6 +140,7 @@ const Wave = () => {
               <div className="flex flex-col gap-4">
                 <div className="flex flex-row gap-4 text-white">
                   <Image
+      alt="image"
                     src={'/static/img/profile.png'}
                     width={50}
                     height={50}

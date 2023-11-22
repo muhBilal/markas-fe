@@ -7,7 +7,7 @@ import Form from './components/Form';
 import BackToBeranda from './components/BackToBeranda';
 
 const page = () => {
-  const [tabs, setTabs] = useState(2);
+  const [tabs, setTabs] = useState(1);
   
   const nextTabs = () => {
     setTabs((prev) => prev + 1)

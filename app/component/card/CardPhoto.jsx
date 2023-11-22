@@ -13,24 +13,28 @@ const CardPhoto = () => {
                 <Marquee speed={40} pauseOnHover direction={'left'}>
                     <div className={`mx-3 whitespace-nowrap grid grid-cols-4 gap-x-6`}>
                         <Image
+      alt="image"
                             src={'/static/img/kolaborasi.png'}
                             width={500}
                             height={500}
                             className="rounded-xl"
                         />
                         <Image
+      alt="image"
                             src={'/static/img/kolaborasi.png'}
                             width={500}
                             height={500}
                             className="rounded-xl"
                         />
                         <Image
+      alt="image"
                             src={'/static/img/kolaborasi.png'}
                             width={500}
                             height={500}
                             className="rounded-xl"
                         />
                         <Image
+      alt="image"
                             src={'/static/img/kolaborasi.png'}
                             width={500}
                             height={500}
@@ -42,24 +46,28 @@ const CardPhoto = () => {
                 <Marquee speed={40} pauseOnHover direction={'right'}>
                     <div className={`mx-3 whitespace-nowrap grid grid-cols-4 gap-x-6  `}>
                         <Image
+      alt="image"
                             src={'/static/img/kolaborasi.png'}
                             width={500}
                             height={500}
                             className="rounded-xl"
                         />
                         <Image
+      alt="image"
                             src={'/static/img/kolaborasi.png'}
                             width={500}
                             height={500}
                             className="rounded-xl"
                         />
                         <Image
+      alt="image"
                             src={'/static/img/kolaborasi.png'}
                             width={500}
                             height={500}
                             className="rounded-xl"
                         />
                         <Image
+      alt="image"
                             src={'/static/img/kolaborasi.png'}
                             width={500}
                             height={500}

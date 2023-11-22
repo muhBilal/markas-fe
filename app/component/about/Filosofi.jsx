@@ -15,7 +15,8 @@ const Filosofi = () => {
                 </div>
                 <div className="md:p-16 py-16 grid grid-cols-1 gap-y-5">
                     <div className="flex gap-5">
-                        <Image src="/static/img/ruangbelajar.png" width={300} height={300} className="w-48 h-32 md:w-96 md:h-72 rounded-xl" />
+                        <Image
+      alt="image" src="/static/img/ruangbelajar.png" width={300} height={300} className="w-48 h-32 md:w-96 md:h-72 rounded-xl" />
                         <div className="flex flex-col justify-center gap-y-2">
                             <h2 className={`text-primary font-light text-lg `}>Gain Knowledge</h2>
                             <h2 className={`font-semibold text-2xl `}>Ruang Belajar</h2>
@@ -23,7 +24,8 @@ const Filosofi = () => {
                         </div>
                     </div>
                     <div className="flex flex-row-reverse  gap-5">
-                        <Image src="/static/img/tempatkonsultasi.png" width={300} height={300} className="w-48 h-32 md:w-96 md:h-72 rounded-xl" />
+                        <Image
+      alt="image" src="/static/img/tempatkonsultasi.png" width={300} height={300} className="w-48 h-32 md:w-96 md:h-72 rounded-xl" />
                         <div className="flex flex-col justify-center gap-y-2">
                             <h2 className={`text-primary font-light text-lg `}>Get Mentored</h2>
                             <h2 className={`font-semibold text-2xl `}>Tempat Berkonsultasi</h2>
@@ -31,7 +33,8 @@ const Filosofi = () => {
                         </div>
                     </div>
                     <div className="flex gap-5">
-                        <Image src="/static/img/kolaborasi.png" width={300} height={300} className="w-48 h-32 md:w-96 md:h-72 rounded-xl" />
+                        <Image
+      alt="image" src="/static/img/kolaborasi.png" width={300} height={300} className="w-48 h-32 md:w-96 md:h-72 rounded-xl" />
                         <div className="flex flex-col justify-center gap-y-2">
                             <h2 className={`text-primary font-light text-lg `}>Expand Network</h2>
                             <h2 className={`font-semibold text-2xl `}>Wadah Berkolaborasi</h2>

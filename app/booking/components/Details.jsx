@@ -22,6 +22,7 @@ const Details = () => {
 
                 <div className="flex flex-col md:flex-row mt-10 lg:mt-20 gap-5">
                     <Image
+      alt="image"
                         src={'/static/img/kolaborasi.png'}
                         width={1200}
                         height={800}
@@ -29,12 +30,14 @@ const Details = () => {
                     />
                     <div className="flex flex-col justify-start items-start gap-5">
                         <Image
+      alt="image"
                             src={'/static/img/kolaborasi.png'}
                             width={480}
                             height={480}
                             className="rounded-xl"
                         />
                         <Image
+      alt="image"
                             src={'/static/img/kolaborasi.png'}
                             width={480}
                             height={480}
@@ -42,6 +45,7 @@ const Details = () => {
                         />
                         <button className="border-black border-2 px-4 xl:px-44 py-2 text-sm lg:text-2xl rounded hover:border-primary hover:text-primary transition-all">+19 Foto</button>
                         {/* <Image
+      alt="image"
                             src={'/static/img/kolaborasi.png'}
                             width={380}
                             height={380}
@@ -147,6 +151,7 @@ const Details = () => {
                             <div className="lg:grid grid-cols-2  gap-3 lg:gap-6 mt-5">
                                 <div className="rounded-md">
                                     <Image
+      alt="image"
                                         src={'/static/img/kolaborasi.png'}
                                         width={800}
                                         height={400}
@@ -185,6 +190,7 @@ const Details = () => {
                             <div className="lg:grid grid-cols-2  gap-3 lg:gap-6 mt-5">
                                 <div className="rounded-md">
                                     <Image
+      alt="image"
                                         src={'/static/img/kolaborasi.png'}
                                         width={800}
                                         height={400}
