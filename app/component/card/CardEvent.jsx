@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const CardEvent = () => {
-    return (<Container>
+    return (
         <section className={`grid gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 `}>
             <div className={`bg-primary border-4 border-black`}>
                 <div className={`grid grid-cols-3 p-4`}>
@@ -403,5 +403,5 @@ export const CardEvent = () => {
 
 
         </section>
-    </Container>)
+    )
 }
