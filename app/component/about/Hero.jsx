@@ -12,12 +12,16 @@ const Hero = () => {
              bg-black/80 backdrop-brightness-75 text-white">
                 <TypeAnimation
                     sequence={[
-                        'Ini cerita tentang <span className={`${lexend_peta.className} text-primary`}>MARKAS</span> kita...',
-                        500,
+                        'Ini cerita tentang MARKAS kita...',
+                        1000,
+                        'Ini cerita tentang RUMAH kita...',
+                        1000,
+                        'Ini cerita tentang LINGKUNGAN kita...',
+                        1000,
                     ]}
-                    speed={50}
+                    speed={35}
                     repeat={Infinity}
-                    className="font-light text-xl md:text-2xl text-center"
+                    className="font-light text-xl md:text-2xl lg:text-3xl xl:text-6xl text-center"
                 />
                 <span className="font-light text-xl md:text-2xl text-center">
 
