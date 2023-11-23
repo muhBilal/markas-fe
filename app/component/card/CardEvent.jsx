@@ -9,9 +9,9 @@ export const CardEvent = () => {
 
     useEffect(() => {
         const getEvents = async () => {
-            await axios.get(`http://127.0.0.1:8000/api/v1/admin/event`).then(function (res) {
+            await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/v1/admin/event`).then(function (res) {
                 const eventes = res.data
-                console.log(eventes)
+
                 setEvents(eventes.data)
             })
         }
@@ -91,7 +91,7 @@ export const CardEvent = () => {
                                 <div className={`relative`}>
                                     <Image
                                         alt={event.speaker_name}
-                                        src={`/${event.speaker_image}`}
+                                        src={`${process.env.NEXT_PUBLIC_API_URL}/storage/${event.speaker_image}`}
                                         width={300}
                                         height={300}
                                         className="h-[140px] 2xl:w-[140px] w-full object-cover border-4 border-bluePrimary relative top-0 left-0 z-10"

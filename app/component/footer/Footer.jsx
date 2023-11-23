@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaInstagram, FaYoutube } from "react-icons/fa";
 import { FiArrowUpRight } from "react-icons/fi";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 
 const lexend_peta = Lexend_Peta({ subsets: ['latin'], weight: ['400', '700'] })
@@ -10,6 +12,18 @@ const lexend_mega = Lexend_Mega({ subsets: ['latin'], weight: ['400', '700'] })
 
 
 const Footer = () => {
+    const [regional, setRegional] = useState([])
+
+    useEffect(() => {
+        const getRegional = async () => {
+            await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/v1/admin/regional`).then(function (res) {
+                const regionals = res.data
+
+                setRegional(regionals.data)
+            })
+        }
+        getRegional()
+    }, [])
     return (
         <footer>
 
@@ -48,10 +62,13 @@ const Footer = () => {
                         <div className="col-span-2 mt-8 md:mt-3 flex md:flex-row flex-col justify-around gap-y-8 md:gap-y-0">
                             <div className=" uppercase flex flex-col sm:gap-y-3 md:gap-y-8">
                                 <h3 className="font-light text-[#D90027] text-lg sm:text-xl">Regional</h3>
-                                <a href="#" className={`${lexend_mega.className} text-sm sm:text-[23px]`}>SURABAYA</a>
-                                <a href="#" className={`${lexend_mega.className} text-sm sm:text-[23px]`}>JAKARTA</a>
-                                <a href="#" className={`${lexend_mega.className} text-sm sm:text-[23px]`}>BANDUNG</a>
-                                <a href="#" className={`${lexend_mega.className} text-sm sm:text-[23px]`}>DENPASAR</a>
+                                {regional.map(regionals => {
+                                    return (
+                                        <>
+                                            <a href="#" className={`${lexend_mega.className} text-sm sm:text-[23px]`}>{regionals.name}</a>
+                                        </>
+                                    )
+                                })}
                             </div>
                             <div className="uppercase  flex flex-col sm:gap-y-3 md:gap-y-8">
                                 <h3 className="font-light text-[#D90027] text-lg sm:text-xl">Contact Us</h3>
