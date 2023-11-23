@@ -1,7 +1,6 @@
 "use client"
-import Link from "next/link";
 import { Lexend_Peta } from "next/font/google";
-import Container from "../Container";
+
 import { useSession, signOut } from "next-auth/react";
 import GoogleSignInBtn from "@/app/component/GoogleSignInBtn";
 
@@ -38,12 +37,13 @@ const Navbars = () => {
                     <Navbar.Toggle className="bg-transparent text-primary" />
                 </div>
                 <Navbar.Collapse >
-                    <Navbar.Link href="/" active className="font-light text-primary ">
+                    <Navbar.Link href="/" active className="font-light text-primary  ">
                         Beranda
                     </Navbar.Link>
                     <Navbar.Link className="text-primary font-light " href="/about">About</Navbar.Link>
                     <Navbar.Link className="text-primary font-light " href="/philosophy">Philosophy</Navbar.Link>
                     <Navbar.Link className="text-primary font-light " href="/events">Events</Navbar.Link>
+                    <Navbar.Link className="text-primary font-light " href="/booking">Booking</Navbar.Link>
                     <Navbar.Link className="text-primary font-light " href="/contact-us">Contact Us</Navbar.Link>
                 </Navbar.Collapse>
 
