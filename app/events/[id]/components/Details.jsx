@@ -7,11 +7,14 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from 'next/navigation'
+import { useRouter } from "next/navigation";
 const lexend_peta = Lexend_Peta({ subsets: ["latin"], weight: ["400", "700"] });
 
 const Details = () => {
     const [events, setEvents] = useState([]);
+    const [accessToken, setAccessToken] = useState([]);
     const params = useParams();
+    const router = useRouter();
 
     const [eventDate, setEventDate] = useState({
         date: null,
@@ -20,8 +23,60 @@ const Details = () => {
     });
 
     const handleJoinEvent = async () => {
-
+        const booking = {
+            'summary': 'Mengikuti Event ' + events.title ?? 'Ini event',
+            'description': events.description ?? 'testing event',
+            'start': {
+              'dateTime': new Date(events.start_time).toISOString(),
+              'timeZone': Intl.DateTimeFormat().resolvedOptions().timeZone
+            },
+            'end': {
+              'dateTime': new Date(events.end_time).toISOString(),
+              'timeZone': Intl.DateTimeFormat().resolvedOptions().timeZone
+            }
+          }
+      
+          try{
+            const req = await fetch(`https://www.googleapis.com/calendar/v3/calendars/primary/events`, {
+              method: 'POST',
+              headers: {
+                'Authorization': 'Bearer ' + accessToken
+              },
+              body: JSON.stringify(booking)
+            })
+      
+            
+            if(req.ok){
+                router.push('/')
+            }else{
+              toast('Event gagal dibuat');
+            }
+          } catch(e){
+            console.log(e.message);
+          }
     }
+
+    const getGoogleAccessToken = async () => {
+        try {
+          const req = await fetch('/api/token', {
+            method: 'GET',
+            credentials: 'include'
+          });
+      
+          if (req.ok) {
+            const res = await req.json();
+            setAccessToken(res.accessToken.access_token)
+          } else {
+            console.error('Failed to fetch access token');
+          }
+        } catch (error) {
+          console.error('Error fetching access token:', error);
+        }
+      }
+
+    useEffect(() => {
+        getGoogleAccessToken();
+    }, []);
 
     useEffect(() => {
         let ignore = false;
@@ -83,7 +138,7 @@ const Details = () => {
                         <p className="text-gray-500 text-sm md:text-lg">{events.sub_title}</p>
                     </div>
                     <div className="rc">
-                        <button className='rounded bg-primary text-white py-4 px-5 text-xl'>Ikuti Event</button>
+                        <button onClick={handleJoinEvent} className='rounded bg-primary text-white py-4 px-5 text-xl'>Ikuti Event</button>
                     </div>
                 </div>
 
