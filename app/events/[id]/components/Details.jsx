@@ -124,27 +124,27 @@ const Details = () => {
   return (
     <>
         <Container>
-            <div className="md:px-20 lg:px-32 mt-10">
-                <div className="flex flex-col lg:flex-row justify-between gap-7 items-center">
+            <div className="mt-10 md:px-20 lg:px-32">
+                <div className="flex flex-col items-center justify-between lg:flex-row gap-7">
                     <div className="lc">
                         <h2
                             className={`text-[#D90027] font-semibold ${lexend_peta.className} text-md md:text-2xl lg:text-4xl  uppercase`}
                         >
                             EPISODE {events.episode}
                         </h2>
-                        <h2 className="font-bold text-md md:text-2xl lg:text-4xl uppercase my-3 md:my-5">
+                        <h2 className="my-3 font-bold uppercase text-md md:text-2xl lg:text-4xl md:my-5">
                             {events.title}
                         </h2>
-                        <p className="text-gray-500 text-sm md:text-lg">{events.sub_title}</p>
+                        <p className="text-sm text-gray-500 md:text-lg">{events.sub_title}</p>
                     </div>
                     <div className="rc">
-                        <button onClick={handleJoinEvent} className='rounded bg-primary text-white py-4 px-5 text-xl'>Ikuti Event</button>
+                        <button onClick={handleJoinEvent} className='px-5 py-4 text-xl text-white rounded bg-primary'>Ikuti Event</button>
                     </div>
                 </div>
 
                 <div className="mt-10 lg:mt-20" id="fasilitas-gedung">
-                    <h1 className="text-md md:text-2xl lg:text-4xl font-bold">Profil Pembicara</h1>
-                    <div className="lg:grid grid-cols-2 mt-20 gap-7">
+                    <h1 className="font-bold text-md md:text-2xl lg:text-4xl">Profil Pembicara</h1>
+                    <div className="grid-cols-2 mt-20 lg:grid gap-7">
                         <div className="left-content">
                             <Image
                                 alt="image"
@@ -157,22 +157,22 @@ const Details = () => {
                         </div>
                         <div className="right-content">
                             <h1 className="text-4xl font-bold">{events.speaker_name}</h1>
-                            <p className="text-lg text-gray-500 mt-5">{events.speaker_desc}</p>
+                            <p className="mt-5 text-lg text-gray-500">{events.speaker_desc}</p>
                             <p className="mt-10">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut dolorem asperiores, facere iure aliquam sapiente exercitationem totam doloremque quam at porro maiores quos voluptatem animi corporis beatae eos rem est nesciunt dolores explicabo deserunt veritatis? Saepe eveniet nemo, laudantium distinctio ut aperiam quisquam labore incidunt maxime in dolore similique illo ab debitis. Eaque, sed eos debitis iure facilis deleniti culpa rerum, illo omnis a expedita fugit odit, eveniet accusamus pariatur laborum consequatur. Pariatur numquam similique esse harum, optio dolores, quia ullam tenetur magni velit ipsa earum id, vel possimus quis quidem laboriosam labore iusto. Natus ducimus minus dignissimos non ullam accusamus voluptate doloremque provident architecto nobis, laboriosam nam aliquid eius labore expedita veniam! Est accusamus nulla illum, in ab enim.</p>
                         </div>
                     </div>
                 </div>
 
                 <div className="mt-10 lg:mt-20" id="fasilitas-gedung">
-                    <h1 className="text-md md:text-2xl lg:text-4xl font-bold">Detail Acara</h1>
+                    <h1 className="font-bold text-md md:text-2xl lg:text-4xl">Detail Acara</h1>
                     <div className="mt-20">
-                        <h3 className="text-2xl text-primary font-bold mt-20">SEKOLAH BETA {events.event_role?.role} EPS. {events.episode} - {events.event_album?.name}</h3>
+                        <h3 className="mt-20 text-2xl font-bold text-primary">SEKOLAH BETA {events.event_role?.role} EPS. {events.episode} - {events.event_album?.name}</h3>
                         <p className="mt-5 text-gray-500 text-md">
                             {/* Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam dolores a sequi incidunt rem repellendus molestias ducimus aliquid, autem dolore corrupti laboriosam praesentium ab soluta, nam hic earum consectetur tempore saepe. Consequatur voluptates nisi quidem praesentium dignissimos officia, labore eos culpa vel, beatae accusantium, neque impedit exercitationem. Rem dignissimos itaque non repudiandae consequuntur beatae minus qui aliquid sunt vel neque perspiciatis laudantium veritatis iste, unde voluptates placeat dicta necessitatibus aperiam! Consequatur id sunt ducimus, soluta voluptate iure repellat maiores corporis, amet cumque iusto. Laborum corrupti id necessitatibus nihil molestias. Consequuntur odio, eius voluptate sapiente corporis atque voluptatem praesentium placeat nostrum expedita adipisci facilis ullam dolorum ad laudantium inventore non eos ratione asperiores? Repellat nam qui facilis, labore eum minima deleniti. */}
                             {events.description}
                         </p>
                     </div>
-                    <h3 className="text-2xl text-primary font-bold mt-10">Save The Date</h3>
+                    <h3 className="mt-10 text-2xl font-bold text-primary">Save The Date</h3>
 
                     <div className="mt-10">
                         <div className="flex gap-5">
@@ -200,7 +200,7 @@ const Details = () => {
                     </div>
                     <div className="mt-10">
                         <div className={`pb-4 text-black`}>
-                            <p className="font-light text-sm">Dapatkan e-sertificate sebagai tanda partisipasi:</p>
+                            <p className="text-sm font-light">Dapatkan e-sertificate sebagai tanda partisipasi:</p>
                             <Link href={`#`} className={`text-center`}>
                                 <p className={`mt-2 border-4 border-secondary max-w-[19rem] p-1 text-black mr-3`}>10000startupdigital.id/sekolahbeta</p>
                             </Link>
