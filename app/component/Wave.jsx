@@ -110,7 +110,7 @@ const Wave = () => {
                     <div className="flex flex-row gap-4 text-white">
                       <Image
                         alt={testimonials.name}
-                        src={testimonials.profile}
+                        // src={testimonials.profile}
                         width={50}
                         height={50}
                         className='w-16 md:w-16 2xl:w-24'

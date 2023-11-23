@@ -89,13 +89,13 @@ export const CardEvent = () => {
                                 </div>
                                 <div className={`col-span-1 flex flex-col gap-y-4`}>
                                     <div className={`relative`}>
-                                        <Image
+                                        {/* <Image
                                             alt={event.speaker_name}
                                             src={`${process.env.NEXT_PUBLIC_API_URL}/storage/${event.speaker_image}`}
                                             width={300}
                                             height={300}
                                             className="h-[140px] 2xl:w-[140px] w-full object-cover border-4 border-bluePrimary relative top-0 left-0 z-10"
-                                        />
+                                        /> */}
                                         <div className={`bg-bluePrimary  h-[140px]     w-full absolute top-1 xl:right-3 left-1  -z-0`}></div>
                                     </div>
                                     <div className="flex flex-col text-white gap-y-1">

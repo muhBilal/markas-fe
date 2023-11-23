@@ -24,7 +24,7 @@ import axios from "axios";
 export default function Home() {
     const [formData, setFormData] = useState({
         name: '',
-        profile: 'porfile',
+        profile: '',
         company: '',
         location: 'Surabaya',
         place_id: 5,
