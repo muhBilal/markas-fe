@@ -49,11 +49,9 @@ const CalendarComponent = ({startValue, setStartValue, endValue, setEndValue, se
         body: JSON.stringify(booking)
       })
 
-      alert('Berhasil melakukan pemesanan')
-      setIsDateSet(true);
-
       if(req.ok){
-        //
+        alert('Berhasil melakukan pemesanan')
+        setIsDateSet(true);
       }else{
         toast('Event gagal dibuat');
       }
@@ -89,14 +87,14 @@ const CalendarComponent = ({startValue, setStartValue, endValue, setEndValue, se
   return (
     <>
       <div className="mt-10">
-        <h2 className="font-bold text-2xl mb-5">Pilih Tanggal Booking</h2>
-        <div className="flex gap-5 items-center">
+        <h2 className="mb-5 text-2xl font-bold">Pilih Tanggal Booking</h2>
+        <div className="flex items-center gap-5">
           <SelectDatepicker
             selectedDate={startValue}
             onDateChange={onStartDateChange}
           />
 
-          <p className="text-xl mt-5">sampai</p>
+          <p className="mt-5 text-xl">sampai</p>
 
           <SelectDatepicker
             selectedDate={endValue}
@@ -104,11 +102,11 @@ const CalendarComponent = ({startValue, setStartValue, endValue, setEndValue, se
           />
         </div>
 
-        <button className='rounded bg-primary text-white py-2 px-3 mt-5' onClick={createEvent}>Konfirmasi</button>
+        <button className='px-3 py-2 mt-5 text-white rounded bg-primary' onClick={createEvent}>Konfirmasi</button>
       </div>
 
       <div className="mt-20">
-        <h2 className="font-bold text-2xl mb-5 text-center">Preview Calendar Google</h2>
+        <h2 className="mb-5 text-2xl font-bold text-center">Preview Calendar Google</h2>
         <Calendar apiKey={API_KEY} calendars={calendars} />
       </div>
     </>
