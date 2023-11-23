@@ -19,10 +19,11 @@ import Karakteristik from "./component/Karakteristik";
 import Faq from "./component/home/Faq";
 import Wave from "./component/Wave";
 import axios from "axios";
+import Swal from 'sweetalert2'
 export default function Home() {
     const [formData, setFormData] = useState({
         name: '',
-        profile: '',
+        profile: 'profile aja',
         company: '',
         location: 'Surabaya',
         place_id: 5,
@@ -31,8 +32,11 @@ export default function Home() {
     })
     const handleSubmit = async () => {
         const result = await axios.post(process.env.NEXT_PUBLIC_API_URL + '/api/v1/admin/testimonial', formData)
-        console.log(result)
-        alert('okok')
+        Swal.fire(
+            'Sukses!',
+            'Berhasil mengirimkan komentar!',
+            'success'
+          )   
     }
 
     useEffect(() => {
