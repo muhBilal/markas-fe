@@ -8,9 +8,9 @@ const GoogleSignInBtn = () => {
     <>
       {
         status !== "authenticated" ? (
-          <button className='rounded text-[#D90027] py-2 px-3' onClick={() => signIn('google')}>Masuk</button>
-          ) : (
-            <button className='rounded bg-red-[#D90027] text-white py-2 px-3' onClick={() => signOut()}>Keluar</button>
+          <button className='rounded bg-primary text-white py-2 px-4' onClick={() => signIn('google')}>Masuk</button>
+        ) : (
+          <button className='rounded bg-red-[#D90027] text-white py-2 px-3' onClick={() => signOut()}>Keluar</button>
         )
       }
     </>

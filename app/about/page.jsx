@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 
 import { Lexend_Peta } from "next/font/google";
