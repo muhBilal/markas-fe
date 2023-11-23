@@ -14,6 +14,15 @@ const handlers = NextAuth({
       },
     }),
   ],
+  callbacks: {
+    jwt: ({ token, account }) => {
+      if (account?.access_token) {
+        token.access_token = account.access_token;
+      }
+      return token;
+    },
+  },
+  secret: process.env.NEXT_PUBLIC_SECRET,
 });
 
 export { handlers as GET, handlers as POST };
