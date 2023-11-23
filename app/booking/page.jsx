@@ -5,19 +5,48 @@ import Image from "next/image";
 import {useEffect, useState} from "react";
 import Filter from "./components/Filter";
 import Details from "./components/Details";
-import process from "next/dist/build/webpack/loaders/resolve-url-loader/lib/postcss";
 import axios from "axios";
 
 export default function page() {
-    const [place, setPlace] = useState([])
+    const [place, setPlace] = useState([]);
+    const [filteredData, setFilteredData] = useState([]);
+    const [filterTitle, setFilterTitle] = useState('');
+    const [tags, setTags] = useState('Surabaya');
+
     const getData = async () => {
         const response = await axios.get(process.env.NEXT_PUBLIC_API_URL + "/api/v1/admin/place");
-        setPlace(response.data.data)
+        setPlace(response.data.data);
+
+        const filter = [];
+        response.data.data.map(item => {
+            filter.push(item);
+        })
+
+        setFilteredData(filter);
+    }
+
+    const handleFilterData = () => {
+        if(filterTitle == ''){
+            return
+        }
+
+        const placeData = [...place];
+        const result = placeData.filter(item =>
+            item.title.toLowerCase().includes(key.toLowerCase())
+        );
+
+        setFilteredData(result)
     }
 
     useEffect(() => {
+        let ignore = false;
+        if(!ignore){
+            getData();
+        }
+
         initFlowbite();
-        getData();
+
+        return () => ignore = true;
     }, []);
     return (
         <div className="bg-white">
@@ -32,8 +61,8 @@ export default function page() {
                 />
             </Button>
             <div>
-                <Filter data={place}/>
-                {/*<Details/>*/}
+                <Filter setFilterTitle={setFilterTitle} />
+                <Details data={[...filteredData]} handleFilterData={handleFilterData} />
             </div>
         </div>
     );

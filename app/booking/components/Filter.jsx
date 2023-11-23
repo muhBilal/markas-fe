@@ -8,9 +8,9 @@ const lexend_peta = Lexend_Peta({ subsets: ["latin"], weight: ["400", "700"] });
 
 const Filter = ({data}) => {
   const [isShow, setisShow] = useState(false);
-  const [active, setActive] = useState()
-  const [filteredData, setFilteredData] = useState([])
-  const [filtered, setFiltered] = useState()
+  const [active, setActive] = useState();
+  const [filteredData, setFilteredData] = useState([]);
+  const [filtered, setFiltered] = useState();
   const handleCity = (city) => {
     setActive(city)
     const filteredData = data.filter(item => item.regional.name === city);
@@ -91,13 +91,13 @@ const Filter = ({data}) => {
                     active === 'Depnasar' ? 'bg-[#D90027] text-white' : ''
                 }`}
             >
-              Depnasar
+              Denpasar
             </div>
           </div>
         </div>
       </div>
 
-      <Details data={filteredData} filters={filtered} />
+      {/* <Details data={filteredData} filters={filtered} /> */}
     </Container>
   );
 };

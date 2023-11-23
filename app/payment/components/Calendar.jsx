@@ -28,8 +28,8 @@ const CalendarComponent = ({startValue, setStartValue, endValue, setEndValue, se
     }
 
     const booking = {
-      'summary': localStorage.getItem('item_title') ?? 'Ini event',
-      'description': localStorage.getItem('item_description') ?? 'testing event',
+      'summary': 'Pemesanan markas',
+      'description': 'Melakukan pemesanan markas di ' + localStorage.getItem('markas_place_name') + ', ' + localStorage.getItem('markas_place_regional') + ' dengan ruangan ' + localStorage.getItem('markas_place_room'),
       'start': {
         'dateTime': startValue.toISOString(),
         'timeZone': Intl.DateTimeFormat().resolvedOptions().timeZone
@@ -49,7 +49,7 @@ const CalendarComponent = ({startValue, setStartValue, endValue, setEndValue, se
         body: JSON.stringify(booking)
       })
 
-      router.replace('http://localhost:3000/payment');
+      alert('Berhasil melakukan pemesanan')
       setIsDateSet(true);
 
       if(req.ok){
