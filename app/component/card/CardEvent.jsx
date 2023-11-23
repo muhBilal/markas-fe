@@ -97,25 +97,27 @@ export const CardEvent = () => {
                                 </div>
                                 <div className={`col-span-1 flex flex-col gap-y-4`}>
                                     <div className={`relative`}>
-                                        <Image
+                                        {/* <Image
                                             alt={event.speaker_name}
-                                            src={`${process.env.NEXT_PUBLIC_API_URL}/storage/${event.speaker_image}`}
+                                            // src={`${process.env.NEXT_PUBLIC_API_URL}/storage/${event.speaker_image}`}
+                                            src={process.env.NEXT_PUBLIC_API_URL + '/storage/'}
                                             width={300}
                                             height={300}
-                                            className="h-[140px] 2xl:w-[140px] w-full object-cover border-4 border-bluePrimary relative top-0 left-0 z-10"
-                                        />
+                                            className="h-[140px] 2xl:w-[140px] w-full object-cover border-4 z-9 border-bluePrimary relative top-0 left-0 z-10"
+                                        /> */}
+                                        <img src={process.env.NEXT_PUBLIC_API_URL + '/storage/' + event.speaker_image} className="h-[140px] 2xl:w-[140px] w-full object-cover border-4 border-bluePrimary relative top-0 left-0 z-10" />
                                         <div className={`bg-bluePrimary  h-[140px]     w-full absolute top-1 xl:right-3 left-1  -z-0`}></div>
                                     </div>
                                     <div className="flex flex-col text-white gap-y-1">
-                                        <h2 className="font-bold text-sm">{event.speaker_name}</h2>
-                                        <p className="font-light text-sm">{event.speaker_desc}</p>
+                                        <h2 className="text-sm font-bold">{event.speaker_name}</h2>
+                                        <p className="text-sm font-light">{event.speaker_desc}</p>
 
                                     </div>
                                 </div>
                             </div>
 
                             <div className={`px-4 pb-4 text-white`}>
-                                <p className="font-light text-sm">Dapatkan e-sertificate sebagai tanda partisipasi:</p>
+                                <p className="text-sm font-light">Dapatkan e-sertificate sebagai tanda partisipasi:</p>
                                 <Link href={`#`} className={`text-center`}>
                                     <p className={`mt-2 border-4 border-secondary max-w-[19rem] p-1 text-white mr-3`}>10000startupdigital.id/sekolahbeta</p>
                                 </Link>
