@@ -152,6 +152,7 @@ const Filter = () => {
         {/* <div className="p-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 gap-y-12 md:gap-y-0">
           <div className="flex flex-col gap-5">
             <Image
+      alt="image"
               src="/static/img/ruangbelajar.png"
               width={300}
               height={300}
@@ -168,6 +169,7 @@ const Filter = () => {
           </div>
           <div className="flex flex-col gap-5">
             <Image
+      alt="image"
               src="/static/img/tempatkonsultasi.png"
               width={300}
               height={300}
@@ -184,6 +186,7 @@ const Filter = () => {
           </div>
           <div className="flex flex-col gap-5">
             <Image
+      alt="image"
               src="/static/img/kolaborasi.png"
               width={300}
               height={300}

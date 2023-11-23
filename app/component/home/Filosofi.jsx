@@ -15,19 +15,22 @@ const Filosofi = () => {
                 </div>
                 <div className="md:p-16 p-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 gap-y-12 md:gap-y-0">
                     <div className="flex flex-col gap-5">
-                        <Image src="/static/img/ruangbelajar.png" width={300} height={300} className="rounded-xl" />
+                        <Image
+      alt="image" src="/static/img/ruangbelajar.png" width={300} height={300} className="rounded-xl" />
                         <h2 className={`text-[#D90027] font-light text-lg `}>Gain Knowledge</h2>
                         <h2 className={`font-semibold text-2xl `}>Ruang Belajar</h2>
                         <span className={`font-light text-lg`}>MARKAS sangat mengedepankan kegunaan ruang untuk menunjang aktivitas penggunanya.</span>
                     </div>
                     <div className="flex flex-col gap-5">
-                        <Image src="/static/img/tempatkonsultasi.png" width={300} height={300} className="rounded-xl" />
+                        <Image
+      alt="image" src="/static/img/tempatkonsultasi.png" width={300} height={300} className="rounded-xl" />
                         <h2 className={`text-[#D90027] font-light text-lg `}>Get Mentored</h2>
                         <h2 className={`font-semibold text-2xl `}>Tempat Berkonsultasi</h2>
                         <span className={`font-light text-lg `}>Fasilitas pertemuan singkat maupun diskusi panjang untuk mengolah ide menjadi nyata.</span>
                     </div>
                     <div className="flex flex-col gap-5">
-                        <Image src="/static/img/kolaborasi.png" width={300} height={300} className="rounded-xl" />
+                        <Image
+      alt="image" src="/static/img/kolaborasi.png" width={300} height={300} className="rounded-xl" />
                         <h2 className={`text-[#D90027] font-light text-lg `}>Expand Network</h2>
                         <h2 className={`font-semibold text-2xl `}>Wadah Berkolaborasi</h2>
                         <span className={`font-light text-lg `}>Area kerja bersama yang dapat diakses para startup founder dan stakeholder startup.</span>

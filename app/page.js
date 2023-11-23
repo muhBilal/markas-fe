@@ -33,6 +33,7 @@ export default function Home() {
         href="#top"
       >
         <Image
+          alt="image"
           src={"/static/img/icon-float-btn.svg"}
           width={150}
           height={150}

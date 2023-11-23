@@ -10,29 +10,29 @@ const Filter = () => {
 
   return (
     <Container>
-      <div className="py-32 ">
-        <div className="px-32 text-center flex flex-col gap-8 items-center">
+      <div className="py-10 lg:py-28">
+        <div className="lg:px-32 md:px-20 text-center flex flex-col gap-4 lg:gap-8 items-center">
           <h2
-            className={`text-[#D90027] font-semibold ${lexend_peta.className} text-2xl  uppercase`}
+            className={`text-[#D90027] font-semibold ${lexend_peta.className} text-sm md:text-xl lg:text-2xl  uppercase`}
           >
             Booking
           </h2>
-          <h2 className="font-bold text-4xl uppercase">
+          <h2 className="font-bold text-md md:text-2xl lg:text-4xl uppercase">
             CARI MARKAS DI SEKITARMU!
           </h2>
 
-          <form className="w-full mt-5">
+          <form className="w-full lg:mt-5">
             <label
               htmlFor="default-search"
               className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
             >
               Search
             </label>
-            <div class="relative bg-gray-100 items-center shadow-md w-full rounded-[2.5rem]">
+            <div className="relative bg-gray-100 items-center shadow-md w-full rounded-[2.5rem]">
               <input
                 type="search"
                 id="default-search"
-                class="block w-full p-7 text-2xl text-gray-900 border-none pr-20 placeholder:text-gray-400 font-light placeholder:text-lg xl:placeholder:text-2xl rounded-full bg-white shadow-lg focus:ring-red-500 focus:border-red-500"
+                className="block w-full p-4 lg:p-6 text-sm md:text-lg lg:text-xl text-gray-900 border-none 2xl:pr-20 placeholder:text-gray-400 font-light placeholder:text-sm md:placeholder:text-lg xl:placeholder:text-xl rounded-full bg-white shadow-lg focus:ring-red-500 focus:border-red-500"
                 placeholder="Cari “Kota Surabaya” atau “Sidosermo”"
                 required
               />
@@ -40,18 +40,18 @@ const Filter = () => {
           </form>
         </div>
 
-        <div className="px-32 mt-10">
-          <div className="border border-black justify-center rounded-xl sm:rounded-full w-full items-center flex flex-wrap text-center lg:text-left sm:justify-between gap-4 p-6 xl:p-3">
-            <div className="hover:bg-[#D90027] hover:text-white rounded-full font-bold text-lg xl:text-xl px-4 lg:px-6 2xl:px-12 cursor-pointer py-4">
+        <div className="px-10 md:px-20 lg:px-32 mt-10">
+          <div className="border border-black justify-center rounded-xl sm:rounded-full w-full items-center flex flex-wrap text-center lg:text-left sm:justify-between gap-4 p-2 md:p-2 xl:p-3">
+            <div className="hover:bg-[#D90027] hover:text-white rounded-full font-bold text-sm md:text-lg xl:text-xl px-4 lg:px-6 2xl:px-12 cursor-pointer py-2 md:py-4">
               Surabaya
             </div>
-            <div className="hover:bg-[#D90027] hover:text-white rounded-full  font-bold text-lg xl:text-xl px-4  lg:px-6 2xl:px-12 cursor-pointer py-4">
+            <div className="hover:bg-[#D90027] hover:text-white rounded-full  font-bold text-sm md:text-lg xl:text-xl px-4  lg:px-6 2xl:px-12 cursor-pointer py-2 md:py-4">
               Jakarta
             </div>
-            <div className="hover:bg-[#D90027] hover:text-white rounded-full  font-bold text-lg xl:text-xl px-4  lg:px-6 2xl:px-12 cursor-pointer py-4">
+            <div className="hover:bg-[#D90027] hover:text-white rounded-full  font-bold text-sm md:text-lg xl:text-xl px-4  lg:px-6 2xl:px-12 cursor-pointer py-2 md:py-4">
               Bandung
             </div>
-            <div className="hover:bg-[#D90027] hover:text-white rounded-full  font-bold text-lg xl:text-xl px-4  lg:px-6 2xl:px-12 cursor-pointer py-4">
+            <div className="hover:bg-[#D90027] hover:text-white rounded-full  font-bold text-sm md:text-lg xl:text-xl px-4  lg:px-6 2xl:px-12 cursor-pointer py-2 md:py-4">
               Denpasar
             </div>
           </div>

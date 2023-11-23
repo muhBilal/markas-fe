@@ -9,11 +9,13 @@ const Join = () => {
             <span>Segera bergabung bersama kami di <span className={`text-[#D90027] ${lexend_peta.className}`}>#MARKAS</span></span>
             <div className="">
                 <Image
+      alt="image"
                     src={'/static/img/logo-bulat.png'}
                     width={200}
                     height={200}
                 />
                 <Image
+      alt="image"
                     src={'/static/img/logo.png'}
                     width={200}
                     height={200}

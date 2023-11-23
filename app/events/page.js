@@ -18,6 +18,7 @@ export default function page() {
         href=""
       >
         <Image
+          alt="image"
           src={"/static/img/icon-float-btn.svg"}
           width={150}
           height={150}
@@ -28,18 +29,22 @@ export default function page() {
         <Container>
           <CardEvent />
         </Container>
-        <div className=' flex flex-col gap-y-8 py-32  px-16 text-center '>
-          <h2 className='uppercase font-extrabold text-4xl text-primary'>Mari Berkolaborasi</h2>
-          <div className='flex justify-center'>
+        <div className=" flex flex-col gap-y-8 py-32  px-16 text-center ">
+          <h2 className="uppercase font-extrabold text-4xl text-primary">
+            Mari Berkolaborasi
+          </h2>
+          <div className="flex justify-center">
             <Link
               href={"https://www.instagram.com/markas.indonesia/"}
-              target="_blank">
-              <span className=" text-white rounded-full bg-primary px-16 py-3 font-semibold">Booking</span>
+              target="_blank"
+            >
+              <span className=" text-white rounded-full bg-primary px-16 py-3 font-semibold">
+                Booking
+              </span>
             </Link>
           </div>
         </div>
       </div>
     </div>
-
   );
 }

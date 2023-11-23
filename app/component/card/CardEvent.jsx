@@ -54,6 +54,7 @@ export const CardEvent = () => {
                     <div className={`col-span-1 flex flex-col gap-y-4`}>
                         <div className={`relative`}>
                             <Image
+      alt="image"
                                 src={'/static/img/kolaborasi.png'}
                                 width={300}
                                 height={300}
@@ -133,6 +134,7 @@ export const CardEvent = () => {
                     <div className={`col-span-1 flex flex-col gap-y-4`}>
                         <div className={`relative`}>
                             <Image
+      alt="image"
                                 src={'/static/img/kolaborasi.png'}
                                 width={300}
                                 height={300}
@@ -212,6 +214,7 @@ export const CardEvent = () => {
                     <div className={`col-span-1 flex flex-col gap-y-4`}>
                         <div className={`relative`}>
                             <Image
+      alt="image"
                                 src={'/static/img/kolaborasi.png'}
                                 width={300}
                                 height={300}
@@ -291,6 +294,7 @@ export const CardEvent = () => {
                     <div className={`col-span-1 flex flex-col gap-y-4`}>
                         <div className={`relative`}>
                             <Image
+      alt="image"
                                 src={'/static/img/kolaborasi.png'}
                                 width={300}
                                 height={300}
@@ -370,6 +374,7 @@ export const CardEvent = () => {
                     <div className={`col-span-1 flex flex-col gap-y-4`}>
                         <div className={`relative`}>
                             <Image
+      alt="image"
                                 src={'/static/img/kolaborasi.png'}
                                 width={300}
                                 height={300}
