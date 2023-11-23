@@ -52,12 +52,12 @@ const Faq = () => {
     return (
         <Container>
             <div className="py-32">
-                <div className="px-32 text-center flex flex-col gap-8 items-center">
+                <div className="md:px-32 text-center flex flex-col gap-8 items-center">
                     <h2 className={`text-primary font-semibold ${lexend_peta.className} md:text-2xl text-xl uppercase`}>FAQ</h2>
                     <h2 className="font-bold text-2xl md:text-4xl uppercase">*Masih Ragu?</h2>
-                    <span className="text-lg md:text-xl">Kami menjawab apa yang menjadi pertanyaan Anda. Semoga membantu.</span>
+                    <span className="text-lg xl:text-xl">Kami menjawab apa yang menjadi pertanyaan Anda. Semoga membantu.</span>
                 </div>
-                <div className="py-16">
+                <div className="py-16 px-8">
                     <FAQ
                         title
                         data={data}

@@ -8,12 +8,12 @@ const Filosofi = () => {
     return (
         <Container>
             <div className="py-32 ">
-                <div className="px-32 text-center flex flex-col gap-8 items-center">
+                <div className="md:px-32 text-center flex flex-col gap-8 items-center">
                     <h2 className={`text-[#D90027] font-semibold ${lexend_peta.className} text-2xl  uppercase`}>Filosofi</h2>
                     <h2 className="font-bold text-4xl uppercase">Inklusif dan Kolaboratif</h2>
                     <span className="text-xl">Sejak diinisiasi di tahun 2016, semangat #1000StartupDigital adalah untuk berkolaborasi membuat ekosistem startup Indonesia menjadi inklusif dan kolaboratif.</span>
                 </div>
-                <div className="p-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 gap-y-12 md:gap-y-0">
+                <div className="md:p-16 p-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 gap-y-12 md:gap-y-0">
                     <div className="flex flex-col gap-5">
                         <Image src="/static/img/ruangbelajar.png" width={300} height={300} className="rounded-xl" />
                         <h2 className={`text-[#D90027] font-light text-lg `}>Gain Knowledge</h2>

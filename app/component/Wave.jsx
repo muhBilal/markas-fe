@@ -12,14 +12,14 @@ import Image from 'next/image';
 
 const Wave = () => {
   return (
-    <div className="bg-[url('/vector-wave.svg')]">
+    <div className="bg-[url('/vector-wave.svg')] bg-cover">
       <Container>
         <div className="py-32">
           <div className=" py-8">
             <div className="grid grid-cols-2 items-center">
               <div className="">
-                <h2 className="uppercase font-extrabold text-2xl text-white">Apa Kata Mereka</h2>
-                <h2 className=" flex items-center gap-x-1 font-light text-lg text-white "><FaStar className=' text-yellow-300' /> 4.6 | Ulasan di Google</h2>
+                <h2 className="uppercase font-extrabold text-lg md:text-2xl text-white">Apa Kata Mereka</h2>
+                <h2 className=" flex items-center gap-x-1 font-light text-sm md:text-lg text-white "><FaStar className=' text-yellow-300' /> 4.6 | Ulasan di Google</h2>
               </div>
               <div className="flex gap-x-4 justify-end">
                 <button className="border-white border-[2px] rounded-full  px-2 py-2">
@@ -37,6 +37,15 @@ const Wave = () => {
 
 
           <Swiper
+            breakpoints={{
+
+              368: {
+                slidesPerView: 1,
+              },
+              768: {
+                slidesPerView: 2,
+              },
+            }}
             spaceBetween={50}
             slidesPerView={2}
             onSlideChange={() => console.log('slide change')}
@@ -51,6 +60,7 @@ const Wave = () => {
                     src={'/static/img/profile.png'}
                     width={50}
                     height={50}
+                    className='w-16 md:w-16 2xl:w-24'
                   />
                   <div className="flex flex-col gap-1">
                     <h2 className='font-bold'>Lexi Handi Nayana</h2>
@@ -73,6 +83,7 @@ const Wave = () => {
                     src={'/static/img/profile.png'}
                     width={50}
                     height={50}
+                    className='w-16 md:w-16 2xl:w-24'
                   />
                   <div className="flex flex-col gap-1">
                     <h2 className='font-bold'>Lexi Handi Nayana</h2>
@@ -95,6 +106,7 @@ const Wave = () => {
                     src={'/static/img/profile.png'}
                     width={50}
                     height={50}
+                    className='w-16 md:w-16 2xl:w-24'
                   />
                   <div className="flex flex-col gap-1">
                     <h2 className='font-bold'>Lexi Handi Nayana</h2>
@@ -117,6 +129,7 @@ const Wave = () => {
                     src={'/static/img/profile.png'}
                     width={50}
                     height={50}
+                    className='w-16 md:w-16 2xl:w-24'
                   />
                   <div className="flex flex-col gap-1">
                     <h2 className='font-bold'>Lexi Handi Nayana</h2>
@@ -139,6 +152,8 @@ const Wave = () => {
                     src={'/static/img/profile.png'}
                     width={50}
                     height={50}
+                    className='w-16 md:w-16 2xl:w-24'
+
                   />
                   <div className="flex flex-col gap-1">
                     <h2 className='font-bold'>Lexi Handi Nayana</h2>

@@ -16,15 +16,15 @@ const Event = () => {
                 <div className=" py-8">
                     <div className="grid grid-cols-2 items-center">
                         <div className="">
-                            <h2 className="uppercase font-extrabold text-2xl">Ikuti Kegiatan Kami di Markas</h2>
-                            <h2 className=" font-light text-lg">Jangan lewatkan event-event seru di MARKAS</h2>
+                            <h2 className="uppercase font-extrabold text-md md:text-2xl">Ikuti Kegiatan Kami di Markas</h2>
+                            <h2 className=" font-light text-sm md:text-lg">Jangan lewatkan event-event seru di MARKAS</h2>
                         </div>
                         <div className="flex gap-x-4 justify-end">
                             <button className="border-black border-[2px] rounded-full  px-2 py-2">
-                                <RxCaretLeft className="text-4xl font-extrabold" />
+                                <RxCaretLeft className="text-2xl md:text-4xl font-extrabold" />
                             </button>
                             <button className="border-black border-[2px] rounded-full  px-2 py-2">
-                                <RxCaretRight className="text-4xl font-extrabold" />
+                                <RxCaretRight className="text-2xl md:text-4xl font-extrabold" />
                             </button>
                         </div>
                     </div>
