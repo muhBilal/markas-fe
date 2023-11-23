@@ -103,14 +103,9 @@ export const CardEvent = () => {
                                             src={process.env.NEXT_PUBLIC_API_URL + '/storage/'}
                                             width={300}
                                             height={300}
-<<<<<<< HEAD
-                                            className="h-[140px] 2xl:w-[140px] w-full object-cover border-4 border-bluePrimary relative top-0 left-0 z-10"
-                                        /> */}
-=======
                                             className="h-[140px] 2xl:w-[140px] w-full object-cover border-4 z-9 border-bluePrimary relative top-0 left-0 z-10"
                                         /> */}
                                         <img src={process.env.NEXT_PUBLIC_API_URL + '/storage/' + event.speaker_image} className="h-[140px] 2xl:w-[140px] w-full object-cover border-4 border-bluePrimary relative top-0 left-0 z-10" />
->>>>>>> db2d526d0e058aad3c11e62d79177e9f17ef5382
                                         <div className={`bg-bluePrimary  h-[140px]     w-full absolute top-1 xl:right-3 left-1  -z-0`}></div>
                                     </div>
                                     <div className="flex flex-col text-white gap-y-1">
