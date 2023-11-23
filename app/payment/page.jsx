@@ -5,9 +5,14 @@ import Container from '../component/Container';
 import Calendar from './components/Calendar';
 import Form from './components/Form';
 import BackToBeranda from './components/BackToBeranda';
+import { useSession } from "next-auth/react";
 
 const page = () => {
   const [tabs, setTabs] = useState(1);
+  const [startValue, setStartValue] = useState(null);
+  const [endValue, setEndValue] = useState(null);
+  const [isDateSet, setIsDateSet] = useState(false);
+  const { data: session } = useSession();
   
   const nextTabs = () => {
     setTabs((prev) => prev + 1)
@@ -28,43 +33,15 @@ const page = () => {
     deskripsi: ''
   });
 
-  const addEvent = async () => {
-    const event = {
-      'summary': 'Test Event',
-      'description': 'Test aja',
-      'start': {
-        'dateTime': new Date().toISOString(),
-        'timeZone': Intl.DateTimeFormat().resolvedOptions().timeZone
-      },
-      'end': {
-        'dateTime': new Date().toISOString(),
-        'timeZone': Intl.DateTimeFormat().resolvedOptions().timeZone
-      }
-    }
-
-    const req = await fetch(`https://www.googleapis.com/calendar/v3/calendars/aswinarung1@gmail.com/events`, {
-      method: 'POST',
-      headers: {
-        'Authorization': 'Bearer ' + process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID
-      },
-      body: JSON.stringify(event)
-    })
-
-    const res = req.json();
-
-    console.log(res);
-  }
-
   return (
     <Container>
-        <button onClick={addEvent}>Tambah event</button>
         <div className='my-5'>
           <NavTabs tabs={tabs} />
         </div>
         {
           tabs == 1 && (
             <div className="my-5">
-              <Calendar />
+              <Calendar startValue={startValue} setStartValue={setStartValue} endValue={endValue} setEndValue={setEndValue} setIsDateSet={setIsDateSet} session={session} />
             </div>
           )
         }
