@@ -49,7 +49,7 @@ const config = {
 const Faq = () => {
     return (
         <Container>
-            <div className="py-32">
+            <div className="py-32 px-32">
                 <div className="flex flex-col items-center gap-8 text-center md:px-32">
                     <h2 className={`text-primary font-semibold ${lexend_peta.className} md:text-2xl text-xl uppercase`}>FAQ</h2>
                     <h2 className="text-2xl font-bold uppercase md:text-4xl">*Masih Ragu?</h2>

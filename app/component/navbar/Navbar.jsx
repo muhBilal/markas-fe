@@ -10,11 +10,6 @@ const lexend_peta = Lexend_Peta({ subsets: ['latin'], weight: ['400', '700'] })
 const Navbars = () => {
     const { data, status } = useSession();
     const currentRoute = usePathname();
-
-    // styles for all links
-    const linkStyle = 'flex items-center pl-[30px] pr-[30px] h-full no-underline hover:text-amber-600 duration-300';
-
-    // styles for active and non-active links
     const activeStyle = ' text-primary font-semibold';
     const nonActiveStyle = ' text-primary font-light';
     return (
