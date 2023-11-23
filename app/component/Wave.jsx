@@ -10,7 +10,26 @@ import Image from 'next/image';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 
+import { useEffect, useState } from "react";
+import axios from "axios";
+
+
 const Wave = () => {
+  const [testimonial, setTestimonial] = useState([])
+
+  useEffect(() => {
+    const getTestimonial = async () => {
+
+      await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/v1/admin/testimonial`).then(function (res) {
+        const testi = res.data
+        setTestimonial(testi.data)
+
+      })
+    }
+    getTestimonial()
+
+  }, [])
+
   const swiperRef = useRef(null);
 
   const goToNextSlide = () => {
@@ -67,127 +86,45 @@ const Wave = () => {
               nextEl: '.swiper-button-next',
             }}
           >
-            <SwiperSlide>
-              <div className="flex flex-col gap-4">
-                <div className="flex flex-row gap-4 text-white">
-                  <Image
-                    alt="image"
-                    src={'/static/img/profile.png'}
-                    width={50}
-                    height={50}
-                    className='w-16 md:w-16 2xl:w-24'
-                  />
-                  <div className="flex flex-col gap-1">
-                    <h2 className='font-bold'>Lexi Handi Nayana</h2>
-                    <h2 className='font-light'>Lexi Handi Nayana</h2>
+            {testimonial.map(testimonials => {
+
+              return (
+                <SwiperSlide>
+                  <div className="flex flex-col gap-4">
+                    <div className="flex flex-row gap-4 text-white">
+                      <Image
+                        alt={testimonials.name}
+                        src={testimonials.profile}
+                        width={50}
+                        height={50}
+                        className='w-16 md:w-16 2xl:w-24'
+                      />
+                      <div className="flex flex-col gap-1">
+                        <h2 className='font-bold'>{testimonials.name}</h2>
+                        <h2 className='font-light'>{testimonials.company} - {testimonials.location}</h2>
+                      </div>
+                    </div>
+                    <div className="flex gap-2">
+
+                      <FaStar className='text-yellow-300' values={testimonials.rating} />
+                      <FaStar className='text-yellow-300' values={testimonials.rating} />
+                      <FaStar className='text-yellow-300' values={testimonials.rating} />
+                      <FaStar className='text-yellow-300' values={testimonials.rating} />
+                      <FaStar className='text-yellow-300' values={testimonials.rating} />
+
+                    </div>
+
+                    <p className='text-white font-normal'>{testimonials.message}</p>
                   </div>
-                </div>
-                <div className="flex gap-2">
-                  <FaStar className=' text-yellow-300' />
-                  <FaStar className=' text-yellow-300' />
-                  <FaStar className=' text-yellow-300' />
-                </div>
+                </SwiperSlide>
 
-                <p className='text-white font-normal'>Kami memulai perjalanan kami di MARKAS dan tidak pernah menyesalinya. Tempat yang penuh dengan sumber daya dan inspirasi.</p>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="flex flex-col gap-4">
-                <div className="flex flex-row gap-4 text-white">
-                  <Image
-                    alt="image"
-                    src={'/static/img/profile.png'}
-                    width={50}
-                    height={50}
-                    className='w-16 md:w-16 2xl:w-24'
-                  />
-                  <div className="flex flex-col gap-1">
-                    <h2 className='font-bold'>Lexi Handi Nayana</h2>
-                    <h2 className='font-light'>Lexi Handi Nayana</h2>
-                  </div>
-                </div>
-                <div className="flex gap-2">
-                  <FaStar className=' text-yellow-300' />
-                  <FaStar className=' text-yellow-300' />
-                  <FaStar className=' text-yellow-300' />
-                </div>
+              )
+            })}
 
-                <p className='text-white font-normal'>Kami memulai perjalanan kami di MARKAS dan tidak pernah menyesalinya. Tempat yang penuh dengan sumber daya dan inspirasi.</p>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="flex flex-col gap-4">
-                <div className="flex flex-row gap-4 text-white">
-                  <Image
-                    alt="image"
-                    src={'/static/img/profile.png'}
-                    width={50}
-                    height={50}
-                    className='w-16 md:w-16 2xl:w-24'
-                  />
-                  <div className="flex flex-col gap-1">
-                    <h2 className='font-bold'>Lexi Handi Nayana</h2>
-                    <h2 className='font-light'>Lexi Handi Nayana</h2>
-                  </div>
-                </div>
-                <div className="flex gap-2">
-                  <FaStar className=' text-yellow-300' />
-                  <FaStar className=' text-yellow-300' />
-                  <FaStar className=' text-yellow-300' />
-                </div>
 
-                <p className='text-white font-normal'>Kami memulai perjalanan kami di MARKAS dan tidak pernah menyesalinya. Tempat yang penuh dengan sumber daya dan inspirasi.</p>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="flex flex-col gap-4">
-                <div className="flex flex-row gap-4 text-white">
-                  <Image
-                    alt="image"
-                    src={'/static/img/profile.png'}
-                    width={50}
-                    height={50}
-                    className='w-16 md:w-16 2xl:w-24'
-                  />
-                  <div className="flex flex-col gap-1">
-                    <h2 className='font-bold'>Lexi Handi Nayana</h2>
-                    <h2 className='font-light'>Lexi Handi Nayana</h2>
-                  </div>
-                </div>
-                <div className="flex gap-2">
-                  <FaStar className=' text-yellow-300' />
-                  <FaStar className=' text-yellow-300' />
-                  <FaStar className=' text-yellow-300' />
-                </div>
 
-                <p className='text-white font-normal'>Kami memulai perjalanan kami di MARKAS dan tidak pernah menyesalinya. Tempat yang penuh dengan sumber daya dan inspirasi.</p>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="flex flex-col gap-4">
-                <div className="flex flex-row gap-4 text-white">
-                  <Image
-                    alt="image"
-                    src={'/static/img/profile.png'}
-                    width={50}
-                    height={50}
-                    className='w-16 md:w-16 2xl:w-24'
 
-                  />
-                  <div className="flex flex-col gap-1">
-                    <h2 className='font-bold'>Lexi Handi Nayana</h2>
-                    <h2 className='font-light'>Lexi Handi Nayana</h2>
-                  </div>
-                </div>
-                <div className="flex gap-2">
-                  <FaStar className=' text-yellow-300' />
-                  <FaStar className=' text-yellow-300' />
-                  <FaStar className=' text-yellow-300' />
-                </div>
 
-                <p className='text-white font-normal'>Kami memulai perjalanan kami di MARKAS dan tidak pernah menyesalinya. Tempat yang penuh dengan sumber daya dan inspirasi.</p>
-              </div>
-            </SwiperSlide>
           </Swiper>
 
         </div>
