@@ -11,13 +11,13 @@ const Filter = () => {
   return (
     <Container>
       <div className="py-32 ">
-        <div className="px-32 text-center flex flex-col gap-8 items-center">
+        <div className="flex flex-col items-center gap-8 px-32 text-center">
           <h2
             className={`text-[#D90027] font-semibold ${lexend_peta.className} text-2xl  uppercase`}
           >
             Event
           </h2>
-          <h2 className="font-bold text-4xl uppercase">
+          <h2 className="text-4xl font-bold uppercase">
             ikuti kegiatan dimarkas
           </h2>
 
@@ -32,7 +32,7 @@ const Filter = () => {
               <input
                 type="search"
                 id="default-search"
-                className="block w-full p-7 text-sm text-gray-900 border-none pr-20 placeholder:text-gray-400 font-light placeholder:text-lg xl:placeholder:text-2xl rounded-full bg-white shadow-lg focus:ring-red-500 focus:border-red-500"
+                className="block w-full pr-20 text-sm font-light text-gray-900 bg-white border-none rounded-full shadow-lg p-7 placeholder:text-gray-400 placeholder:text-lg xl:placeholder:text-2xl focus:ring-red-500 focus:border-red-500"
                 placeholder="Cari event yang ada di MARKAS Surabaya"
                 required
               />
@@ -40,9 +40,9 @@ const Filter = () => {
                 <div
                   onClick={() => setisShow(true)}
                   type="button"
-                  className="text-white absolute end-5 bottom-5  cursor-pointer focus:ring-4 text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                  className="absolute px-4 py-2 text-sm text-white cursor-pointer end-5 bottom-5 focus:ring-4 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                 >
-                  <svg className="cursor-pointer w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
+                  <svg className="w-6 h-6 text-gray-800 cursor-pointer dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
                     <path d="M18.85 1.1A1.99 1.99 0 0 0 17.063 0H2.937a2 2 0 0 0-1.566 3.242L6.99 9.868 7 14a1 1 0 0 0 .4.8l4 3A1 1 0 0 0 13 17l.01-7.134 5.66-6.676a1.99 1.99 0 0 0 .18-2.09Z" />
                   </svg>
                 </div>
@@ -63,8 +63,8 @@ const Filter = () => {
               {isShow && (<>
 
                 <div className="p-12 font-medium">
-                  <h2 className="uppercase text-xl text-start">Ruangan</h2>
-                  <div className="flex flex-wrap mt-8 gap-8">
+                  <h2 className="text-xl uppercase text-start">Ruangan</h2>
+                  <div className="flex flex-wrap gap-8 mt-8">
                     <span className="px-3 py-1 xl:px-7 xl:py-4 xl:text-xl bg-white border rounded-full border-black hover:border-[#D90027] hover:text-[#D90027] cursor-pointer">
                       Ruangan 1
                     </span>
@@ -87,10 +87,10 @@ const Filter = () => {
                       Ruangan 1
                     </span>
                   </div>
-                  <h2 className="uppercase text-xl text-start mt-10">
+                  <h2 className="mt-10 text-xl uppercase text-start">
                     Jenis Kegiatan
                   </h2>
-                  <div className="flex flex-wrap mt-8 gap-8">
+                  <div className="flex flex-wrap gap-8 mt-8">
                     <span className="px-3 py-1 xl:px-7 xl:py-4 xl:text-xl bg-white border rounded-full border-black hover:border-[#D90027] hover:text-[#D90027] cursor-pointer">
                       Ruangan 1
                     </span>
@@ -113,9 +113,9 @@ const Filter = () => {
                       Ruangan 1
                     </span>
                   </div>
-                  <h2 className="uppercase text-xl text-start mt-10">Ruangan</h2>
+                  <h2 className="mt-10 text-xl uppercase text-start">Ruangan</h2>
                   {/* tanggal kegiatan pke datepicker */}
-                  <div className="flex flex-col md:flex-row gap-5 mt-10">
+                  <div className="flex flex-col gap-5 mt-10 md:flex-row">
                     <button className="rounded-full border text-[#D90027] border-[#D90027] p-4 md:px-8">
                       Clear Filter
                     </button>
@@ -130,26 +130,26 @@ const Filter = () => {
         </div>
 
         <div className="px-32 mt-10">
-          <div className="border justify-center rounded-xl  sm:rounded-full w-full items-center flex flex-wrap  text-center lg:text-left sm:justify-between gap-4 p-6 xl:p-3">
-            <div className="hover:bg-[#D90027] hover:text-white rounded-full  font-bold text-lg xl:text-xl px-4  lg:px-6 2xl:px-12 cursor-pointer">
+          <div className="flex flex-wrap items-center justify-center w-full gap-4 p-6 text-center border rounded-xl sm:rounded-full lg:text-left sm:justify-between xl:p-3">
+            <div className="hover:bg-[#D90027] hover:text-white rounded-full p-3 font-bold text-lg xl:text-xl px-4  lg:px-6 2xl:px-12 cursor-pointer">
               Kegiatan Hari ini
             </div>
-            <div className="hover:bg-[#D90027] hover:text-white rounded-full  font-bold text-lg xl:text-xl px-4  lg:px-6 2xl:px-12 cursor-pointer">
+            <div className="hover:bg-[#D90027] hover:text-white rounded-full p-3 font-bold text-lg xl:text-xl px-4  lg:px-6 2xl:px-12 cursor-pointer">
               Minggu ini
             </div>
-            <div className="hover:bg-[#D90027] hover:text-white rounded-full  font-bold text-lg xl:text-xl px-4  lg:px-6 2xl:px-12 cursor-pointer">
+            <div className="hover:bg-[#D90027] hover:text-white rounded-full p-3 font-bold text-lg xl:text-xl px-4  lg:px-6 2xl:px-12 cursor-pointer">
               Meeting
             </div>
-            <div className="hover:bg-[#D90027] hover:text-white rounded-full  font-bold text-lg xl:text-xl px-4  lg:px-6 2xl:px-12 cursor-pointer">
+            <div className="hover:bg-[#D90027] hover:text-white rounded-full p-3 font-bold text-lg xl:text-xl px-4  lg:px-6 2xl:px-12 cursor-pointer">
               Workshop
             </div>
-            <div className="hover:bg-[#D90027] hover:text-white rounded-full  font-bold text-lg xl:text-xl px-4  lg:px-6 2xl:px-12 cursor-pointer">
+            <div className="hover:bg-[#D90027] hover:text-white rounded-full p-3 font-bold text-lg xl:text-xl px-4  lg:px-6 2xl:px-12 cursor-pointer">
               Talkshow
             </div>
           </div>
         </div>
 
-        {/* <div className="p-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 gap-y-12 md:gap-y-0">
+        {/* <div className="grid grid-cols-1 gap-5 p-16 sm:grid-cols-2 md:grid-cols-3 gap-y-12 md:gap-y-0">
           <div className="flex flex-col gap-5">
             <Image
       alt="image"

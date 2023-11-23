@@ -6,26 +6,7 @@ import { useState } from "react";
 import Details from "@/app/booking/components/Details";
 const lexend_peta = Lexend_Peta({ subsets: ["latin"], weight: ["400", "700"] });
 
-const Filter = ({data}) => {
-  const [isShow, setisShow] = useState(false);
-  const [active, setActive] = useState()
-  const [filteredData, setFilteredData] = useState([])
-  const [filtered, setFiltered] = useState()
-  const handleCity = (city) => {
-    setActive(city)
-    const filteredData = data.filter(item => item.regional.name === city);
-    setFilteredData(filteredData)
-    setFiltered(true)
-  }
-
-  const handleSearch = (key) => {
-    const filteredData = data.filter(item =>
-        item.title.toLowerCase().includes(key.toLowerCase())
-    );
-    setFilteredData(filteredData)
-    setFiltered(true)
-  }
-
+const Filter = ({tags, setTags, filterTitle, setFilterTitle}) => {
   return (
     <Container>
       <div className="py-10 lg:py-28">
@@ -53,7 +34,8 @@ const Filter = ({data}) => {
                 className="block w-full p-4 lg:p-6 text-sm md:text-lg lg:text-xl text-gray-900 border-none 2xl:pr-20 placeholder:text-gray-400 font-light placeholder:text-sm md:placeholder:text-lg xl:placeholder:text-xl rounded-full bg-white shadow-lg focus:ring-red-500 focus:border-red-500"
                 placeholder="Cari “Kota Surabaya” atau “Sidosermo”"
                 required
-                onChange={(e) => handleSearch(e.target.value)}
+                defaultValue={filterTitle}
+                onChange={(e) => setFilterTitle(e.target.value)}
               />
             </div>
           </form>
@@ -62,42 +44,42 @@ const Filter = ({data}) => {
         <div className="px-10 md:px-20 lg:px-32 mt-10">
           <div className="border border-black justify-center rounded-xl sm:rounded-full w-full items-center flex flex-wrap text-center lg:text-left sm:justify-between gap-4 p-2 md:p-2 xl:p-3">
             <div
-                onClick={() => handleCity('Surabaya')}
+                onClick={() => setTags('Surabaya')}
                 className={`rounded-full font-bold text-sm md:text-lg xl:text-xl px-4 lg:px-6 2xl:px-12 cursor-pointer py-2 md:py-4 ${
-                    active === 'Surabaya' ? 'bg-[#D90027] text-white' : ''
+                    tags === 'Surabaya' ? 'bg-[#D90027] text-white' : ''
                 }`}
             >
               Surabaya
             </div>
             <div
-                onClick={() => handleCity('Jakarta')}
+                onClick={() => setTags('Jakarta')}
                 className={`rounded-full font-bold text-sm md:text-lg xl:text-xl px-4 lg:px-6 2xl:px-12 cursor-pointer py-2 md:py-4 ${
-                    active === 'Jakarta' ? 'bg-[#D90027] text-white' : ''
+                    tags === 'Jakarta' ? 'bg-[#D90027] text-white' : ''
                 }`}
             >
               Jakarta
             </div>
             <div
-                onClick={() => handleCity('Bandung')}
+                onClick={() => setTags('Bandung')}
                 className={`rounded-full font-bold text-sm md:text-lg xl:text-xl px-4 lg:px-6 2xl:px-12 cursor-pointer py-2 md:py-4 ${
-                    active === 'Bandung' ? 'bg-[#D90027] text-white' : ''
+                    tags === 'Bandung' ? 'bg-[#D90027] text-white' : ''
                 }`}
             >
               Bandung
             </div>
             <div
-                onClick={() => handleCity('Depnasar')}
+                onClick={() => setTags('Depnasar')}
                 className={`rounded-full font-bold text-sm md:text-lg xl:text-xl px-4 lg:px-6 2xl:px-12 cursor-pointer py-2 md:py-4 ${
-                    active === 'Depnasar' ? 'bg-[#D90027] text-white' : ''
+                    tags === 'Depnasar' ? 'bg-[#D90027] text-white' : ''
                 }`}
             >
-              Depnasar
+              Denpasar
             </div>
           </div>
         </div>
       </div>
 
-      <Details data={filteredData} filters={filtered} />
+      {/* <Details data={filteredData} filters={filtered} /> */}
     </Container>
   );
 };

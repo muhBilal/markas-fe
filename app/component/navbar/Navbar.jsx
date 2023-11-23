@@ -37,7 +37,7 @@ const Navbars = () => {
                     <Navbar.Toggle className="bg-transparent text-primary" />
                 </div>
                 <Navbar.Collapse >
-                    <Navbar.Link href="/" active className="font-light text-primary  ">
+                    <Navbar.Link href="/" active className="font-light text-primary active:font-semibold " aria-current="page">
                         Beranda
                     </Navbar.Link>
                     <Navbar.Link className="text-primary font-light " href="/about">About</Navbar.Link>

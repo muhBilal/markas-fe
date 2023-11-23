@@ -10,27 +10,25 @@ const data = {
     title: "",
     rows: [
         {
-            title: "Lorem ipsum dolor sit amet,",
-            content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed tempor sem. Aenean vel turpis feugiat,
-              ultricies metus at, consequat velit. Curabitur est nibh, varius in tellus nec, mattis pulvinar metus.
-              In maximus cursus lorem, nec laoreet velit eleifend vel. Ut aliquet mauris tortor, sed egestas libero interdum vitae.
-              Fusce sed commodo purus, at tempus turpis.`,
+            title: "Apakah Ada Acara atau Aktivitas Sosial di MARKAS?",
+            content: `Ya, MARKAS banyak menyelenggarakan acara, seminar, dan kegiatan sosial yang memungkinkan setiap anggota untuk berinteraksi, belajar, dan membangun jaringan.`,
         },
         {
-            title: "Nunc maximus, magna at ultricies elementum",
+            title: "Bagaimana Saya Bisa Bergabung dengan MARKAS?",
             content:
-                "Nunc maximus, magna at ultricies elementum, risus turpis vulputate quam, vitae convallis ex tortor sed dolor.",
+                "Kami sangat senang Anda ingin bergabung dengan kami. Silakan kunjungi halaman ini untuk mengetahui lebih lanjut tentang cara bergabung dengan MARKAS.",
         },
         {
-            title: "Curabitur laoreet, mauris vel blandit fringilla",
-            content: `Curabitur laoreet, mauris vel blandit fringilla, leo elit rhoncus nunc, ac sagittis leo elit vel lorem.
-            Fusce tempor lacus ut libero posuere viverra. Nunc velit dolor, tincidunt at varius vel, laoreet vel quam.
-            Sed dolor urna, lobortis in arcu auctor, tincidunt mattis ante. Vivamus venenatis ultricies nibh in volutpat.
-            Cras eu metus quis leo vestibulum feugiat nec sagittis lacus.Mauris vulputate arcu sed massa euismod dignissim. `,
+            title: "Apakah Ada Jam Operasional Tertentu?",
+            content: `MARKAS buka setiap hari Senin sampai Jumat, pukul 08.00 - 17.00 WIB. Untuk hari Sabtu dan Minggu, MARKAS buka sesuai dengan jadwal acara yang ada. Untuk informasi lebih lanjut, silakan hubungi kami di +62 812-3456-7890 atau email ke official MARKAS`,
         },
         {
-            title: "What is the package version",
-            content: <p>current version is 1.2.1</p>,
+            title: "Bagaimana dengan Privasi di MARKAS?",
+            content: 'MARKAS sangat menghargai privasi Anda. Kami tidak akan pernah membagikan informasi pribadi Anda kepada pihak ketiga tanpa persetujuan Anda. Untuk informasi lebih lanjut, silakan baca Kebijakan Privasi kami.',
+        },
+        {
+            title: "Bagaimana Saya Menyewa untuk Co-Working Space Sementara?",
+            content: 'MARKAS menyediakan ruang kerja bersama yang dapat disewa untuk jangka waktu tertentu. Untuk informasi lebih lanjut, silakan hubungi kami di +62 812-3456-7890 atau email ke official MARKAS',
         },
     ],
 };
@@ -52,12 +50,12 @@ const Faq = () => {
     return (
         <Container>
             <div className="py-32">
-                <div className="md:px-32 text-center flex flex-col gap-8 items-center">
+                <div className="flex flex-col items-center gap-8 text-center md:px-32">
                     <h2 className={`text-primary font-semibold ${lexend_peta.className} md:text-2xl text-xl uppercase`}>FAQ</h2>
-                    <h2 className="font-bold text-2xl md:text-4xl uppercase">*Masih Ragu?</h2>
+                    <h2 className="text-2xl font-bold uppercase md:text-4xl">*Masih Ragu?</h2>
                     <span className="text-lg xl:text-xl">Kami menjawab apa yang menjadi pertanyaan Anda. Semoga membantu.</span>
                 </div>
-                <div className="py-16 px-8">
+                <div className="px-8 py-16">
                     <FAQ
                         title
                         data={data}
@@ -71,7 +69,7 @@ const Faq = () => {
                         href={"#"}
                         className="">
 
-                        <h2 className="flex items-center text-white rounded-full bg-primary p-4 px-8 gap-2">Lebih Banyak <span><FaCaretDown className="text-white" /></span> </h2>
+                        <h2 className="flex items-center gap-2 p-4 px-8 text-white rounded-full bg-primary">Lebih Banyak <span><FaCaretDown className="text-white" /></span> </h2>
 
                     </Link>
                 </div>

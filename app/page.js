@@ -4,8 +4,6 @@ import Image from "next/image";
 import Container from "./component/Container";
 import Hero from "./component/home/Hero";
 import Marquee from "./component/home/Marquees";
-import Qoutes from "./component/home/Quotes";
-import OrderStep from "./component/home/OrderStep";
 
 import {initFlowbite} from "flowbite";
 import React, {useEffect, useState} from "react";

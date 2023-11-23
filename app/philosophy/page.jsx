@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import Hero from '../component/philosophy/Hero'
 import Rich from '../component/philosophy/Rich'

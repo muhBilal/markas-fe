@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export const CardEvent = () => {
     const [events, setEvents] = useState([])
@@ -15,6 +17,12 @@ export const CardEvent = () => {
                 setEvents(eventes.data)
             })
         }
+        AOS.init({
+            easing: 'ease-out-cubic',
+            once: true,
+            offset: 50,
+            delay: 50,
+        });
         getEvents()
     }, [])
     return (
@@ -42,7 +50,7 @@ export const CardEvent = () => {
                 }).format(new Date(event.end_time));
 
                 return (
-                    <div className={`bg-primary border-4 border-black`}>
+                    <div className={`bg-primary border-4 border-black`} data-aos="fade-in">
                         <Link href={'/events/' + event.id}>
                             <div className={`grid grid-cols-3 p-4`}>
                                 <div className={`col-span-2 text-white`}>
@@ -91,30 +99,37 @@ export const CardEvent = () => {
                                     <div className={`relative`}>
                                         {/* <Image
                                             alt={event.speaker_name}
-                                            src={`${process.env.NEXT_PUBLIC_API_URL}/storage/${event.speaker_image}`}
+                                            // src={`${process.env.NEXT_PUBLIC_API_URL}/storage/${event.speaker_image}`}
+                                            src={process.env.NEXT_PUBLIC_API_URL + '/storage/'}
                                             width={300}
                                             height={300}
+<<<<<<< HEAD
                                             className="h-[140px] 2xl:w-[140px] w-full object-cover border-4 border-bluePrimary relative top-0 left-0 z-10"
                                         /> */}
+=======
+                                            className="h-[140px] 2xl:w-[140px] w-full object-cover border-4 z-9 border-bluePrimary relative top-0 left-0 z-10"
+                                        /> */}
+                                        <img src={process.env.NEXT_PUBLIC_API_URL + '/storage/' + event.speaker_image} className="h-[140px] 2xl:w-[140px] w-full object-cover border-4 border-bluePrimary relative top-0 left-0 z-10" />
+>>>>>>> db2d526d0e058aad3c11e62d79177e9f17ef5382
                                         <div className={`bg-bluePrimary  h-[140px]     w-full absolute top-1 xl:right-3 left-1  -z-0`}></div>
                                     </div>
                                     <div className="flex flex-col text-white gap-y-1">
-                                        <h2 className="font-bold text-sm">{event.speaker_name}</h2>
-                                        <p className="font-light text-sm">{event.speaker_desc}</p>
+                                        <h2 className="text-sm font-bold">{event.speaker_name}</h2>
+                                        <p className="text-sm font-light">{event.speaker_desc}</p>
 
                                     </div>
                                 </div>
                             </div>
 
                             <div className={`px-4 pb-4 text-white`}>
-                                <p className="font-light text-sm">Dapatkan e-sertificate sebagai tanda partisipasi:</p>
+                                <p className="text-sm font-light">Dapatkan e-sertificate sebagai tanda partisipasi:</p>
                                 <Link href={`#`} className={`text-center`}>
                                     <p className={`mt-2 border-4 border-secondary max-w-[19rem] p-1 text-white mr-3`}>10000startupdigital.id/sekolahbeta</p>
                                 </Link>
                             </div>
                             <div
                                 className={`uppercase bg-white border-t-4 border-b-4 border-bluePrimary text-center md:-[19px] 2xl:text-xl font-bold px-10 py-3`}>
-                                SEKOLAH BETA {event.event_role.role} EPS. {events.episode} - {event.event_album.name}
+                                SEKOLAH BETA {event.event_role.role} EPS. {event.episode} - {event.event_album.name}
                             </div>
                             <div className={`uppercase flex justify-between px-5 text-white md:text-[19px] 2xl:text-xl py-4 font-semibold`}>
                                 <p>{event.regional.name}</p>
