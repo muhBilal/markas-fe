@@ -5,60 +5,53 @@ import Container from "../Container";
 import { useSession, signOut } from "next-auth/react";
 import GoogleSignInBtn from "@/app/component/GoogleSignInBtn";
 
+import { Avatar, Dropdown, Navbar } from 'flowbite-react';
 const lexend_peta = Lexend_Peta({ subsets: ['latin'], weight: ['400', '700'] })
 
-const Navbar = () => {
+const Navbars = () => {
     const { data, status } = useSession();
     return (
-        <div className="w-full bg-white">
-            <div className="py-4 boder[0.5px]">
-                <Container>
-                    <div className="grid grid-cols-12 items-center justify-between gap-3 md-gap-0">
-                        <Link href='/' className={`${lexend_peta.className} col-span-3 font-bold text-2xl text-[#D90027]`}>
-                            MARKAS
-                        </Link>
-                        <div className="col-span-6  flex gap-x-6 items-center justify-center  text-[#D90027] font-light">
-                            <Link href="/">
-                                Beranda
-                            </Link>
-                            <Link href="/about">
-                                About
-                            </Link>
-                            <Link href="/philosophy">
-                                Philosophy
-                            </Link>
-                            <Link href="/events">
-                                Events
-                            </Link>
-                            <Link href="/booking">
-                                Booking
-                            </Link>
-                            <Link href="/contact-us">
-                                Contact Us
-                            </Link>
-                        </div>
-                        <div className="col-span-3  flex justify-center items-center gap-x-4">
-                            {
-                                status !== "authenticated" ? (
-                                    <GoogleSignInBtn />
-                                ) : (
-                                    <>
-                                        <div className="text-black">
-                                            {
-                                                data?.user?.name
-                                            }
-                                        </div>
-                                        <button className='rounded bg-primary text-white py-2 px-3' onClick={() => signOut()}>Keluar</button>
-                                    </>
-                                )
-                            }
-                        </div>
+        <div className="md:px-16 px-8">
+            <Navbar fluid rounded>
+                <Navbar.Brand href="/" className="hover:border-primary">
+                    <span className={`${lexend_peta.className} col-span-3 text-center font-bold text-2xl text-[#D90027] self-center `}>MARKAS</span>
+                </Navbar.Brand>
 
+
+                <div className="flex md:order-2 gap-x-4 md:gap-x-0">
+                    <div className="col-span-3  flex justify-center items-center gap-x-4">
+                        {
+                            status !== "authenticated" ? (
+                                <GoogleSignInBtn />
+                            ) : (
+                                <>
+                                    <div className="text-black">
+                                        {
+                                            data?.user?.name
+                                        }
+                                    </div>
+                                    <button className='rounded bg-primary text-white py-2 px-3' onClick={() => signOut()}>Keluar</button>
+                                </>
+                            )
+                        }
                     </div>
-                </Container>
-            </div>
+                    <Navbar.Toggle className="bg-transparent text-primary" />
+                </div>
+                <Navbar.Collapse >
+                    <Navbar.Link href="/" active className="font-light text-primary ">
+                        Beranda
+                    </Navbar.Link>
+                    <Navbar.Link className="text-primary font-light " href="/about">About</Navbar.Link>
+                    <Navbar.Link className="text-primary font-light " href="/philosophy">Philosophy</Navbar.Link>
+                    <Navbar.Link className="text-primary font-light " href="/events">Events</Navbar.Link>
+                    <Navbar.Link className="text-primary font-light " href="/contact-us">Contact Us</Navbar.Link>
+                </Navbar.Collapse>
+
+
+            </Navbar>
         </div>
+
     );
 }
 
-export default Navbar;
+export default Navbars;
