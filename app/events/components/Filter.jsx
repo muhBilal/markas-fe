@@ -131,19 +131,19 @@ const Filter = () => {
 
         <div className="px-32 mt-10">
           <div className="border justify-center rounded-xl  sm:rounded-full w-full items-center flex flex-wrap  text-center lg:text-left sm:justify-between gap-4 p-6 xl:p-3">
-            <div className="hover:bg-[#D90027] hover:text-white rounded-full  font-bold text-lg xl:text-xl px-4  lg:px-6 2xl:px-12 cursor-pointer">
+            <div className="hover:bg-[#D90027] hover:text-white rounded-full p-3 font-bold text-lg xl:text-xl px-4  lg:px-6 2xl:px-12 cursor-pointer">
               Kegiatan Hari ini
             </div>
-            <div className="hover:bg-[#D90027] hover:text-white rounded-full  font-bold text-lg xl:text-xl px-4  lg:px-6 2xl:px-12 cursor-pointer">
+            <div className="hover:bg-[#D90027] hover:text-white rounded-full p-3 font-bold text-lg xl:text-xl px-4  lg:px-6 2xl:px-12 cursor-pointer">
               Minggu ini
             </div>
-            <div className="hover:bg-[#D90027] hover:text-white rounded-full  font-bold text-lg xl:text-xl px-4  lg:px-6 2xl:px-12 cursor-pointer">
+            <div className="hover:bg-[#D90027] hover:text-white rounded-full p-3 font-bold text-lg xl:text-xl px-4  lg:px-6 2xl:px-12 cursor-pointer">
               Meeting
             </div>
-            <div className="hover:bg-[#D90027] hover:text-white rounded-full  font-bold text-lg xl:text-xl px-4  lg:px-6 2xl:px-12 cursor-pointer">
+            <div className="hover:bg-[#D90027] hover:text-white rounded-full p-3 font-bold text-lg xl:text-xl px-4  lg:px-6 2xl:px-12 cursor-pointer">
               Workshop
             </div>
-            <div className="hover:bg-[#D90027] hover:text-white rounded-full  font-bold text-lg xl:text-xl px-4  lg:px-6 2xl:px-12 cursor-pointer">
+            <div className="hover:bg-[#D90027] hover:text-white rounded-full p-3 font-bold text-lg xl:text-xl px-4  lg:px-6 2xl:px-12 cursor-pointer">
               Talkshow
             </div>
           </div>

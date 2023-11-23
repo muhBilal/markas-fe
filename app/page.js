@@ -4,8 +4,6 @@ import Image from "next/image";
 import Container from "./component/Container";
 import Hero from "./component/home/Hero";
 import Marquee from "./component/home/Marquees";
-import Qoutes from "./component/home/Quotes";
-import OrderStep from "./component/home/OrderStep";
 
 import { initFlowbite } from "flowbite";
 import { useEffect } from "react";
@@ -43,7 +41,6 @@ export default function Home() {
         <Hero />
         <Marquee />
         <Event />
-        {/* <OrderStep /> */}
         <Filosofi />
         <div className="bg-[#D90027] flex flex-col gap-y-8  p-16 text-center ">
           <h2 className="uppercase font-extrabold text-2xl md:text-4xl text-white">
