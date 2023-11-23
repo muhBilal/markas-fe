@@ -23,7 +23,7 @@ import Swal from 'sweetalert2'
 export default function Home() {
     const [formData, setFormData] = useState({
         name: '',
-        profile: 'profile aja',
+        profile: 'https://images.unsplash.com/photo-1700727961317-2d58a309b953?q=80&w=2084&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         company: '',
         location: 'Surabaya',
         place_id: 5,
