@@ -3,12 +3,14 @@ import Container from "../Container";
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { CardEvent } from "../card/CardEvent";
 import { RxCaretLeft, RxCaretRight } from "react-icons/rx";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Navigation } from 'swiper/modules';
 import 'swiper/css';
+import axios from "axios";
 
 const Event = () => {
     const swiperRef = useRef(null);
+    const [events, setEvents] = useState([]);
 
     const goToNextSlide = () => {
         if (swiperRef.current && swiperRef.current.swiper) {
@@ -21,6 +23,22 @@ const Event = () => {
             swiperRef.current.swiper.slidePrev();
         }
     };
+
+    useEffect(() => {
+        let ignore = false
+        const getEvents = async () => {
+            await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/v1/admin/event`).then(function (res) {
+                const eventes = res.data
+                if(!ignore){
+                    setEvents(eventes.data);
+                }
+            })
+        }
+
+        getEvents();
+
+        return () => ignore = true;
+    }, []);
 
     return (
         <Container>
@@ -55,12 +73,6 @@ const Event = () => {
                         nextEl: '.swiper-button-next',
                     }}
                 >
-                    <SwiperSlide>
-                        <CardEvent />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <CardEvent />
-                    </SwiperSlide>
                     <SwiperSlide>
                         <CardEvent />
                     </SwiperSlide>
