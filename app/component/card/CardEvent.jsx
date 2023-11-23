@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export const CardEvent = () => {
     const [events, setEvents] = useState([])
@@ -15,6 +17,12 @@ export const CardEvent = () => {
                 setEvents(eventes.data)
             })
         }
+        AOS.init({
+            easing: 'ease-out-cubic',
+            once: true,
+            offset: 50,
+            delay: 50,
+        });
         getEvents()
     }, [])
     return (
@@ -42,7 +50,7 @@ export const CardEvent = () => {
                 }).format(new Date(event.end_time));
 
                 return (
-                    <div className={`bg-primary border-4 border-black`}>
+                    <div className={`bg-primary border-4 border-black`} data-aos="fade-in">
                         <Link href={'/events/' + event.id}>
                             <div className={`grid grid-cols-3 p-4`}>
                                 <div className={`col-span-2 text-white`}>
