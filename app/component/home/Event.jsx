@@ -1,15 +1,11 @@
 "use client";
 import Container from "../Container";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import Image from "next/image";
-import Link from "next/link";
+import { Swiper, SwiperSlide } from 'swiper/react'
 import { CardEvent } from "../card/CardEvent";
 import { RxCaretLeft, RxCaretRight } from "react-icons/rx";
 import { useRef } from "react";
-import SwiperCore, { Navigation } from 'swiper';
-
-SwiperCore.use([Navigation]);
+import { Navigation } from 'swiper/modules';
+import 'swiper/css';
 
 const Event = () => {
     const swiperRef = useRef(null);
@@ -48,6 +44,7 @@ const Event = () => {
 
 
                 <Swiper
+                    modules={[Navigation]}
                     ref={swiperRef}
                     spaceBetween={50}
                     slidesPerView={1}

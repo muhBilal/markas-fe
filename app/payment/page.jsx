@@ -28,8 +28,36 @@ const page = () => {
     deskripsi: ''
   });
 
+  const addEvent = async () => {
+    const event = {
+      'summary': 'Test Event',
+      'description': 'Test aja',
+      'start': {
+        'dateTime': new Date().toISOString(),
+        'timeZone': Intl.DateTimeFormat().resolvedOptions().timeZone
+      },
+      'end': {
+        'dateTime': new Date().toISOString(),
+        'timeZone': Intl.DateTimeFormat().resolvedOptions().timeZone
+      }
+    }
+
+    const req = await fetch(`https://www.googleapis.com/calendar/v3/calendars/aswinarung1@gmail.com/events`, {
+      method: 'POST',
+      headers: {
+        'Authorization': 'Bearer ' + process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID
+      },
+      body: JSON.stringify(event)
+    })
+
+    const res = req.json();
+
+    console.log(res);
+  }
+
   return (
     <Container>
+        <button onClick={addEvent}>Tambah event</button>
         <div className='my-5'>
           <NavTabs tabs={tabs} />
         </div>

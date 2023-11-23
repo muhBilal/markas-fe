@@ -7,9 +7,8 @@ import { FaStar } from "react-icons/fa";
 import { RxCaretLeft, RxCaretRight } from "react-icons/rx";
 import Container from './Container';
 import Image from 'next/image';
-import SwiperCore, { Navigation } from 'swiper';
-
-SwiperCore.use([Navigation]);
+import { Navigation } from 'swiper/modules';
+import 'swiper/css';
 
 const Wave = () => {
   const swiperRef = useRef(null);
@@ -48,6 +47,7 @@ const Wave = () => {
 
 
           <Swiper
+            modules={[Navigation]}
             breakpoints={{
 
               368: {
