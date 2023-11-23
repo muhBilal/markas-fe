@@ -51,13 +51,6 @@ const Footer = () => {
                                     </div>
                                 </Link>
                             </div>
-                            {/* <div className="flex items-center">
-                                <img src="/static/img/kominfo.svg" alt="" />
-                                <div className="flex flex-col">
-                                    <span>KOMINFO {new Date().getFullYear()}</span>
-                                    <span>&copy; Direktorat Jenderal Aplikasi Informatika Republik Indonesia</span>
-                                </div>
-                            </div> */}
                         </div>
                         <div className="col-span-2 mt-8 md:mt-3 flex md:flex-row flex-col justify-around gap-y-8 md:gap-y-0">
                             <div className=" uppercase flex flex-col sm:gap-y-3 md:gap-y-8">
