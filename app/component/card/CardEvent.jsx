@@ -124,7 +124,7 @@ export const CardEvent = () => {
                             </div>
                             <div
                                 className={`uppercase bg-white border-t-4 border-b-4 border-bluePrimary text-center md:-[19px] 2xl:text-xl font-bold px-10 py-3`}>
-                                SEKOLAH BETA {event.event_role.role} EPS. {events.episode} - {event.event_album.name}
+                                SEKOLAH BETA {event.event_role.role} EPS. {event.episode} - {event.event_album.name}
                             </div>
                             <div className={`uppercase flex justify-between px-5 text-white md:text-[19px] 2xl:text-xl py-4 font-semibold`}>
                                 <p>{event.regional.name}</p>
