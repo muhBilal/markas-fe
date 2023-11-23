@@ -97,14 +97,16 @@ const Details = () => {
                     const start_hours = time_start_dateObj.getHours();
                     const start_minutes = time_start_dateObj.getMinutes();
                     const start_seconds = time_start_dateObj.getSeconds();
-                    const start_result = `${start_hours}:${start_minutes}:${start_seconds}`;
+                    const formatted_minutes = start_minutes < 10 ? `0${start_minutes}` : `${start_minutes}`;
+                    const start_result = `${start_hours}:${formatted_minutes}`;
 
                     // Ubah time end
                     const time_end_dateObj = new Date(eventes.data.end_time);
                     const end_hours = time_end_dateObj.getHours();
                     const end_minutes = time_end_dateObj.getMinutes();
                     const end_seconds = time_end_dateObj.getSeconds();
-                    const end_result = `${end_hours}:${end_minutes}:${end_seconds}`;
+                    const formatted_end_minutes = end_minutes < 10 ? `0${end_minutes}` : `${end_minutes}`;
+                    const end_result = `${end_hours}:${formatted_end_minutes}`;
 
                     setEventDate({
                         date: formattedDate,

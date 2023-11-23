@@ -16,22 +16,19 @@ import axios from "axios";
 
 const Wave = () => {
   const [testimonial, setTestimonial] = useState([])
-
   useEffect(() => {
     const getTestimonial = async () => {
-
       await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/v1/admin/testimonial`).then(function (res) {
         const testi = res.data
+        const modifiedTestimonial = { ...testi.data, rating: parseInt(testi.data.rating) };
+        setTestimonial(modifiedTestimonial);
         setTestimonial(testi.data)
-
       })
     }
     getTestimonial()
-
   }, [])
 
   const swiperRef = useRef(null);
-
   const goToNextSlide = () => {
     if (swiperRef.current && swiperRef.current.swiper) {
       swiperRef.current.swiper.slideNext();
@@ -43,6 +40,26 @@ const Wave = () => {
       swiperRef.current.swiper.slidePrev();
     }
   };
+
+  const getRandomStars = () => {
+    const minStars = 1;
+    const maxStars = 5;
+    const randomStars = Math.floor(Math.random() * (maxStars - minStars + 1)) + minStars;
+
+    return randomStars;
+  };
+
+  const renderStars = () => {
+    const starsCount = getRandomStars();
+    const stars = [];
+
+    for (let i = 0; i < starsCount; i++) {
+      stars.push(<FaStar key={i} className='text-yellow-300' />);
+    }
+
+    return stars;
+  };
+
   return (
     <div className="bg-[url('/vector-wave.svg')] bg-cover">
       <Container>
@@ -87,14 +104,13 @@ const Wave = () => {
             }}
           >
             {testimonial.map(testimonials => {
-
               return (
                 <SwiperSlide>
                   <div className="flex flex-col gap-4">
                     <div className="flex flex-row gap-4 text-white">
                       <Image
                         alt={testimonials.name}
-                        src={testimonials.profile}
+                        // src={testimonials.profile}
                         width={50}
                         height={50}
                         className='w-16 md:w-16 2xl:w-24'
@@ -105,26 +121,19 @@ const Wave = () => {
                       </div>
                     </div>
                     <div className="flex gap-2">
-
-                      <FaStar className='text-yellow-300' values={testimonials.rating} />
-                      <FaStar className='text-yellow-300' values={testimonials.rating} />
-                      <FaStar className='text-yellow-300' values={testimonials.rating} />
-                      <FaStar className='text-yellow-300' values={testimonials.rating} />
-                      <FaStar className='text-yellow-300' values={testimonials.rating} />
-
+                      {renderStars()}
+                      {/*<FaStar className='text-yellow-300' values={testimonials.rating} />*/}
+                      {/*<FaStar className='text-yellow-300' values={testimonials.rating} />*/}
+                      {/*<FaStar className='text-yellow-300' values={testimonials.rating} />*/}
+                      {/*<FaStar className='text-yellow-300' values={testimonials.rating} />*/}
+                      {/*<FaStar className='text-yellow-300' values={testimonials.rating} />*/}
                     </div>
-
                     <p className='text-white font-normal'>{testimonials.message}</p>
                   </div>
                 </SwiperSlide>
 
               )
             })}
-
-
-
-
-
           </Swiper>
 
         </div>
