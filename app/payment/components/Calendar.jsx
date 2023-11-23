@@ -8,7 +8,6 @@ import { useRouter } from 'next/navigation';
 const CalendarComponent = ({startValue, setStartValue, endValue, setEndValue, setIsDateSet, session}) => {
   const [accessToken, setAccessToken] = useState(null);
   const router = useRouter();
-  // const [calendars, setCalendars] = useState([]);
 
   const API_KEY = process.env.NEXT_PUBLIC_GOOGLE_API_KEY;
   let calendars = [
