@@ -23,17 +23,17 @@ const Footer = () => {
                                 <Link href={'https://www.instagram.com/markas.indonesia/'} target="_blank">
                                     <div className="flex items-center gap-2">
 
-                                        <FaInstagram className="text-4xl text-black" />
-                                        <h2 className={`${lexend_mega.className} text-[23px] uppercase`}>Instagram</h2>
-                                        <FiArrowUpRight className="text-xl text-black ml-6" />
+                                        <FaInstagram className="text-3xl sm:text-4xl text-black" />
+                                        <h2 className={`${lexend_mega.className} text-sm sm:text-[23px] uppercase`}>Instagram</h2>
+                                        <FiArrowUpRight className="sm:text-xl text-black ml-6" />
 
                                     </div>
                                 </Link>
                                 <Link href={'https://www.youtube.com/@1000startupdigital'} target="_blank">
                                     <div className="flex items-center gap-2">
-                                        <FaYoutube className="text-4xl text-black" />
-                                        <h2 className={`${lexend_mega.className} text-[23px] uppercase`}>Youtube</h2>
-                                        <FiArrowUpRight className="text-xl text-black ml-6" />
+                                        <FaYoutube className="text-3xl sm:text-4xl text-black" />
+                                        <h2 className={`${lexend_mega.className} text-sm sm:text-[23px] uppercase`}>Youtube</h2>
+                                        <FiArrowUpRight className="sm:text-xl text-black ml-6" />
                                     </div>
                                 </Link>
                             </div>
@@ -47,22 +47,22 @@ const Footer = () => {
                         </div>
                         <div className="col-span-2 mt-8 md:mt-3 flex md:flex-row flex-col justify-around gap-y-8 md:gap-y-0">
                             <div className=" uppercase flex flex-col sm:gap-y-3 md:gap-y-8">
-                                <h3 className="font-light text-[#D90027] text-xl">Regional</h3>
-                                <a href="#" className={`${lexend_mega.className} text-[23px]`}>SURABAYA</a>
-                                <a href="#" className={`${lexend_mega.className} text-[23px]`}>JAKARTA</a>
-                                <a href="#" className={`${lexend_mega.className} text-[23px]`}>BANDUNG</a>
-                                <a href="#" className={`${lexend_mega.className} text-[23px]`}>DENPASAR</a>
+                                <h3 className="font-light text-[#D90027] text-lg sm:text-xl">Regional</h3>
+                                <a href="#" className={`${lexend_mega.className} text-sm sm:text-[23px]`}>SURABAYA</a>
+                                <a href="#" className={`${lexend_mega.className} text-sm sm:text-[23px]`}>JAKARTA</a>
+                                <a href="#" className={`${lexend_mega.className} text-sm sm:text-[23px]`}>BANDUNG</a>
+                                <a href="#" className={`${lexend_mega.className} text-sm sm:text-[23px]`}>DENPASAR</a>
                             </div>
                             <div className="uppercase  flex flex-col sm:gap-y-3 md:gap-y-8">
-                                <h3 className="font-light text-[#D90027] text-xl">Contact Us</h3>
-                                <a href="#" className={`${lexend_mega.className} text-[23px]`}>BOOKING</a >
-                                <a href="#" className={`${lexend_mega.className} text-[23px]`}>FAQ</a >
+                                <h3 className="font-light text-[#D90027] text-lg sm:text-xl">Contact Us</h3>
+                                <a href="#" className={`${lexend_mega.className} text-sm sm:text-[23px]`}>BOOKING</a >
+                                <a href="#" className={`${lexend_mega.className} text-sm sm:text-[23px]`}>FAQ</a >
                             </div>
                             <div className="uppercase flex flex-col sm:gap-y-3 md:gap-y-8">
-                                <h3 className="font-light text-[#D90027] text-xl">About</h3>
-                                <a href="#" className={`${lexend_mega.className} text-[23px]`}>PHILOSOPHY</a>
-                                <a href="#" className={`${lexend_mega.className} text-[23px]`}>RUANGAN</a>
-                                <a href="#" className={`${lexend_mega.className} text-[23px]`}>CREDITS</a>
+                                <h3 className="font-light text-[#D90027] text-lg sm:text-xl">About</h3>
+                                <a href="#" className={`${lexend_mega.className} text-sm sm:text-[23px]`}>PHILOSOPHY</a>
+                                <a href="#" className={`${lexend_mega.className} text-sm sm:text-[23px]`}>RUANGAN</a>
+                                <a href="#" className={`${lexend_mega.className} text-sm sm:text-[23px]`}>CREDITS</a>
                             </div>
                         </div>
 

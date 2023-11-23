@@ -46,7 +46,7 @@ export default function Home() {
         {/* <OrderStep /> */}
         <Filosofi />
         <div className="bg-[#D90027] flex flex-col gap-y-8  p-16 text-center ">
-          <h2 className="uppercase font-extrabold text-4xl text-white">
+          <h2 className="uppercase font-extrabold text-2xl md:text-4xl text-white">
             Mari Berkolaborasi
           </h2>
           <div className="flex justify-center">
