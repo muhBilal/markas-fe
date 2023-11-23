@@ -63,14 +63,14 @@ const page = () => {
         <div className="my-3">
           {
             tabs == 1 && (
-              <button className='rounded bg-primary text-white py-2 px-3 block ms-auto' onClick={nextTabs}>Selanjutnya</button>
+              <button className='block px-3 py-2 text-white rounded bg-primary ms-auto' onClick={nextTabs}>Selanjutnya</button>
             )
           }
           {
             tabs == 2 && (
               <div className='flex'>
-                <button className='rounded text-primary py-2 px-3 ms-auto block' onClick={prevTabs}>Sebelumnya</button>
-                <button className='rounded bg-primary text-white py-2 px-3' onClick={nextTabs}>Selanjutnya</button>
+                <button className='block px-3 py-2 rounded text-primary ms-auto' onClick={prevTabs}>Sebelumnya</button>
+                <button className='px-3 py-2 text-white rounded bg-primary' onClick={nextTabs}>Selanjutnya</button>
               </div>
             )
           }

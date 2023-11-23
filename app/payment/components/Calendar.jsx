@@ -49,9 +49,11 @@ const CalendarComponent = ({startValue, setStartValue, endValue, setEndValue, se
         body: JSON.stringify(booking)
       })
 
+      alert('Berhasil melakukan pemesanan')
+      setIsDateSet(true);
+
       if(req.ok){
-        alert('Berhasil melakukan pemesanan')
-        setIsDateSet(true);
+        //
       }else{
         toast('Event gagal dibuat');
       }

@@ -63,7 +63,7 @@ export default function Home() {
                 {/* <OrderStep /> */}
                 <Filosofi />
                 <div className="bg-[#D90027] flex flex-col gap-y-8  p-16 text-center ">
-                    <h2 className="uppercase font-extrabold text-2xl md:text-4xl text-white">
+                    <h2 className="text-2xl font-extrabold text-white uppercase md:text-4xl">
                         Mari Berkolaborasi
                     </h2>
                     <div className="flex justify-center">
@@ -85,17 +85,17 @@ export default function Home() {
                 <Join />
 
                 <Container>
-                    <div className="flex flex-col md:flex-row justify-between lg:px-32 md:mt-32 mt-20">
+                    <div className="flex flex-col justify-between mt-20 md:flex-row lg:px-32 md:mt-32">
                         <div className="flex flex-col">
-                            <h1 className="text-xl md:text-2xl lg:text-4xl font-bold uppercase text-center md:text-left">Komentar</h1>
+                            <h1 className="text-xl font-bold text-center uppercase md:text-2xl lg:text-4xl md:text-left">Komentar</h1>
                             <p className="text-gray-500 mt-5 xl:mt-20 text-sm md:text-md xl:text-xl md:w-[300px] lg:w-[350px] xl:w-[500px] 2xl:w-[700px] text-center md:text-left">
                                 Kirim Pendapatmu Tentang Markas, kirim saran dan kritikmu agar markas menjadi lebih baik
                                 untuk kedepannya dalam mengembangkan generasi muda bangsa.
                             </p>
                         </div>
-                        <div className="shadow-xl rounded-md xl:p-10 p-5 mt-10 md:mt-0 border">
+                        <div className="p-5 mt-10 border rounded-md shadow-xl xl:p-10 md:mt-0">
                             <form className="max-w-sm mx-auto">
-                                {/*<div className="md:grid grid-cols-2 gap-5">*/}
+                                {/*<div className="grid-cols-2 gap-5 md:grid">*/}
                                 <div className="min-w-[25rem]">
                                     <div className="mb-5">
                                         <label for="name"
@@ -121,7 +121,7 @@ export default function Home() {
                                             placeholder="5" required
                                             onChange={(e) => formData.rating = e.target.value} />
                                     </div>
-                                    <div className="mb-5 col-span-2">
+                                    <div className="col-span-2 mb-5">
                                         <label for="message"
                                             class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Pesan
                                             yang ingin disampaikan</label>
