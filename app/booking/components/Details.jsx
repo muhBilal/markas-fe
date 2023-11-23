@@ -7,7 +7,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 const lexend_peta = Lexend_Peta({ subsets: ["latin"], weight: ["400", "700"] });
 
-const Details = ({data, handleFilterData}) => {
+const Details = ({data}) => {
     const router = useRouter();
 
     const handleBookEvent = async (name, regional, room) => {

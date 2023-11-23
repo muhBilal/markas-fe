@@ -30,12 +30,20 @@ export default function page() {
             return
         }
 
-        const placeData = [...place];
-        const result = placeData.filter(item =>
-            item.title.toLowerCase().includes(key.toLowerCase())
+        let placeData = [...place];
+
+        if(filterTitle != ''){
+            placeData = placeData.filter(item =>
+                item.title.toLowerCase().includes(filterTitle.toLowerCase())
+            );
+        }
+
+        placeData = placeData.filter(item => {
+            return item.regional.name == tags
+        }
         );
 
-        setFilteredData(result)
+        setFilteredData(placeData);
     }
 
     useEffect(() => {
@@ -48,6 +56,13 @@ export default function page() {
 
         return () => ignore = true;
     }, []);
+
+    useEffect(() => {
+        setTimeout(() => {
+            handleFilterData();
+        }, 200);
+    }, [filterTitle, tags]);
+
     return (
         <div className="bg-white">
             <Button
@@ -61,8 +76,8 @@ export default function page() {
                 />
             </Button>
             <div>
-                <Filter setFilterTitle={setFilterTitle} />
-                <Details data={[...filteredData]} handleFilterData={handleFilterData} />
+                <Filter tags={tags} setTags={setTags} filterTitle={filterTitle} setFilterTitle={setFilterTitle} />
+                <Details data={[...filteredData]} />
             </div>
         </div>
     );
